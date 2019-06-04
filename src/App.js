@@ -3,32 +3,25 @@ import "./App.css";
 import Navbar from "./Components/NavBar/NavBar";
 import styled from "@emotion/styled";
 
-const PageContainer = styled.div``;
-
-const HeaderContainer = styled.header`
+const PageContainer = styled.body`
   width: 100%;
-  height: 100px;
+  height: 100%;
+  background: #ffffff;
 `;
 
 class App extends Component {
-  state = {
-    lightStatus: false
-  };
-
-  changeLightStatus = () => {
-    this.setState({
-      lightStatus: !this.state.lightStatus
-    });
-  };
+  // changeLightStatus = () => {
+  //   this.setState({
+  //     lightStatus: !this.state.lightStatus
+  //   });
+  // };
 
   render() {
-    const { lightStatus } = this.state;
+    //const { lightStatus } = this.state;
 
     return (
       <PageContainer>
-        <HeaderContainer>
-          <Navbar />
-        </HeaderContainer>
+        <Navbar />
       </PageContainer>
     );
   }

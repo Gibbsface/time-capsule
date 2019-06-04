@@ -10,11 +10,11 @@ const NavbarContainer = styled.div`
   padding-right: 0px;
   padding-left: 0px;
   width: 100%;
+  height: 100px;
 `;
 
 const Button = styled.button`
   background-color: transparent;
-  border-radius: 0px;
   display: inline-block;
   cursor: pointer;
   color: #666062;
@@ -22,40 +22,27 @@ const Button = styled.button`
   font-size: 20px;
   padding: 0px 0px;
   text-decoration: none;
-`;
-
-const Link1 = styled.p`
-  color: blue;
-`;
-const Link2 = styled.p`
-  color: yellow;
-`;
-const Link3 = styled.p`
-  color: green;
-`;
-
-const Button = styled.button`
-  background: white;
-  height: 30px;
-  color: blue;
-  :hover {
-    background: yellow;
-  }
-
   :hover {
     color: #f9b625;
   }
 `;
 
-const Navbar = ({ isLightOn, changeLightStatus }) => {
-  const NavbarContainer = styled.div`
-    background-color: ${isLightOn ? "yellow" : "grey"};
-  `;
+const LinkList = styled.div`
+  color: red;
+`;
+
+const Navbar = () => {
   return (
     <NavbarContainer>
-      <Button>Home</Button>
-      <Button>About</Button>
-      <Button>Other</Button>
+      <div>Pretend there's a logo here</div>
+      <hr />
+      <LinkList>
+        <Button>Map</Button>
+        <Button>Florida</Button>
+        <Button>Kingdom</Button>
+        <Button>Calendar</Button>
+        <Button>Gallery</Button>
+      </LinkList>
     </NavbarContainer>
   );
 };
