@@ -40,7 +40,6 @@ const Button = styled.button`
   :hover {
     color: #f9b625;
   }
-  :
 `;
 
 const Navbar = () => {
