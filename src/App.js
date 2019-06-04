@@ -11,11 +11,19 @@ const HeaderContainer = styled.header`
 `;
 
 class App extends Component {
-  // state = {
+  state = {
+    lightStatus: false
+  };
 
-  // };
+  changeLightStatus = () => {
+    this.setState({
+      lightStatus: !this.state.lightStatus
+    });
+  };
 
   render() {
+    const { lightStatus } = this.state;
+
     return (
       <PageContainer>
         <HeaderContainer>
