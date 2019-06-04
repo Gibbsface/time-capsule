@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./Components/NavBar/NavBar";
+import LandingPage from "./Components/LandingPage/LandingPage";
 import styled from "@emotion/styled";
 
 const PageContainer = styled.body`
@@ -21,7 +22,7 @@ class App extends Component {
 
     return (
       <PageContainer>
-        <Navbar />
+        <LandingPage />
       </PageContainer>
     );
   }
