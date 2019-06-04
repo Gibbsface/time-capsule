@@ -11,12 +11,6 @@ const PageContainer = styled.body`
 `;
 
 class App extends Component {
-  // changeLightStatus = () => {
-  //   this.setState({
-  //     lightStatus: !this.state.lightStatus
-  //   });
-  // };
-
   render() {
     //const { lightStatus } = this.state;
 
