@@ -4,37 +4,48 @@ import styled from "@emotion/styled";
 
 const NavbarContainer = styled.div`
   background-color: #ffffff;
-  position: 0% 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 0px;
-  padding-left: 0px;
-  width: 100%;
+  position: 0 0;
+  margin: auto;
+  padding-top: 15px;
+  padding-right: 15%;
+  padding-left: 15%;
+  width: 70%;
   height: 100px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const LogoContainer = styled.div`
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const LinkList = styled.div`
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Button = styled.button`
   background-color: transparent;
-  display: inline-block;
+  border: 0px;
   cursor: pointer;
   color: #666062;
   font-family: Freight Sans Pro Book;
   font-size: 20px;
-  padding: 0px 0px;
+  padding: 5px 5px;
   text-decoration: none;
   :hover {
     color: #f9b625;
   }
 `;
 
-const LinkList = styled.div`
-  color: red;
-`;
-
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <div>Pretend there's a logo here</div>
+      <LogoContainer>Pretend there's a logo here</LogoContainer>
       <hr />
       <LinkList>
         <Button>Map</Button>
