@@ -5,10 +5,18 @@ import Navbar from "./Components/NavBar/NavBar";
 
 class App extends Component {
   state = {
-    color: "blue"
+    lightStatus: false
+  };
+
+  changeLightStatus = () => {
+    this.setState({
+      lightStatus: !this.state.lightStatus
+    });
   };
 
   render() {
+    const { lightStatus } = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -24,7 +32,10 @@ class App extends Component {
           >
             Learn React
           </a>
-          <Navbar name={this.state.color} />
+          <Navbar
+            isLightOn={lightStatus}
+            changeLightStatus={this.changeLightStatus}
+          />
         </header>
       </div>
     );

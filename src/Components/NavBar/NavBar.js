@@ -2,10 +2,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const NavbarContainer = styled.div`
-  background-color: red;
-`;
-
 const Link1 = styled.p`
   color: blue;
 `;
@@ -20,21 +16,33 @@ const Button = styled.button`
   background: white;
   height: 30px;
   color: blue;
+  :hover {
+    background: yellow;
+  }
 `;
 
 const ButtonTwo = styled(Button)`
   width: 50px;
 `;
 
-const Navbar = ({ color }) => {
+const Navbar = ({ isLightOn, changeLightStatus }) => {
+  const NavbarContainer = styled.div`
+    background-color: ${isLightOn ? "yellow" : "grey"};
+  `;
   return (
     <NavbarContainer>
       <Link1>Home</Link1>
       <Link2>About</Link2>
       <Link3>Other</Link3>
 
-      <Button>Button 1</Button>
-      <ButtonTwo>Button 2</ButtonTwo>
+      <Button onClick={() => console.log(isLightOn)}>Button 1</Button>
+      <ButtonTwo
+        onClick={() => {
+          changeLightStatus();
+        }}
+      >
+        {isLightOn ? <span>Turn Off</span> : <span>Turn On</span>}
+      </ButtonTwo>
     </NavbarContainer>
   );
 };
