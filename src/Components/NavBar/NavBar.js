@@ -3,38 +3,37 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const NavbarContainer = styled.div`
-  background-color: red;
-`;
-
-const Link1 = styled.p`
-  color: blue;
-`;
-const Link2 = styled.p`
-  color: yellow;
-`;
-const Link3 = styled.p`
-  color: green;
+  background-color: #ffffff;
+  position: 0% 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 100%;
 `;
 
 const Button = styled.button`
-  background: white;
-  height: 30px;
-  color: blue;
-`;
+  background-color: transparent;
+  border-radius: 0px;
+  display: inline-block;
+  cursor: pointer;
+  color: #666062;
+  font-family: Freight Sans Pro Book;
+  font-size: 20px;
+  padding: 0px 0px;
+  text-decoration: none;
 
-const ButtonTwo = styled(Button)`
-  width: 50px;
+  :hover {
+    color: #f9b625;
+  }
 `;
 
 const Navbar = ({ color }) => {
   return (
     <NavbarContainer>
-      <Link1>Home</Link1>
-      <Link2>About</Link2>
-      <Link3>Other</Link3>
-
-      <Button>Button 1</Button>
-      <ButtonTwo>Button 2</ButtonTwo>
+      <Button>Home</Button>
+      <Button>About</Button>
+      <Button>Other</Button>
     </NavbarContainer>
   );
 };

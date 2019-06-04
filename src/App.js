@@ -1,32 +1,27 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/NavBar/NavBar";
+import styled from "@emotion/styled";
+
+const PageContainer = styled.div``;
+
+const HeaderContainer = styled.header`
+  width: 100%;
+  height: 100px;
+`;
 
 class App extends Component {
-  state = {
-    color: "blue"
-  };
+  // state = {
+
+  // };
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Navbar name={this.state.color} />
-        </header>
-      </div>
+      <PageContainer>
+        <HeaderContainer>
+          <Navbar />
+        </HeaderContainer>
+      </PageContainer>
     );
   }
 }
