@@ -1,9 +1,10 @@
 // This is the Landing Page Component
 import Navbar from "../../NavBar/NavBar";
-import Footer from "../../NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 import React, { Component } from "react";
 import SunriseImage from "../../../Images/Sunrise.jpeg";
 import styled from "@emotion/styled";
+
 const LandingPagePicture = styled.div`
   background-image: url(${SunriseImage});
   height: 500px;

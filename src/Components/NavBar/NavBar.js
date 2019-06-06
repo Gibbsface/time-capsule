@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import Logo from "../../Images/Logo.png";
 
 const NavbarContainer = styled.div`
   background-color: #ffffff;
@@ -11,15 +12,22 @@ const NavbarContainer = styled.div`
   padding-right: 15%;
   padding-left: 15%;
   width: 70%;
-  height: 100px;
+  height: 125px;
   display: flex;
   flex-direction: column;
 `;
 
-const LogoContainer = styled.div`
-  background-color: #ffffff;
+const LogoContainer = styled(Link)`
+  background-image: url(${Logo});
+  height: 180px;
+  width: 120px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: flex-start;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const LinkList = styled.div`
@@ -46,8 +54,7 @@ const Button = styled(Link)`
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <LogoContainer>Pretend there's a logo here</LogoContainer>
-      <hr />
+      <LogoContainer to='/' className='logo-container' />
       <LinkList>
         <Button to='/about'>About</Button>
         <Button to='/map'>Map</Button>
