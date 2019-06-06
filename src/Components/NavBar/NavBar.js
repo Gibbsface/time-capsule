@@ -54,7 +54,7 @@ const Button = styled(Link)`
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <LogoContainer to='/' className='logo-container' />
+      <LogoContainer to='/' />
       <LinkList>
         <Button to='/about'>About</Button>
         <Button to='/map'>Map</Button>
