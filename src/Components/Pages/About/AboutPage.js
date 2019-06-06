@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import Navbar from "../../NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 
 class AboutPage extends Component {
   render() {
-    return <div>Hello World! Welcome to the About page</div>;
+    return (
+      <>
+        <Navbar />
+        <Footer />
+      </>
+    );
   }
 }
 
