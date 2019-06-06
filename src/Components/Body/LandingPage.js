@@ -2,12 +2,12 @@
 
 import React, { Component } from "react";
 import SunriseImage from "../../Images/Sunrise.jpeg";
-import Navbar from "../NavBar/NavBar";
+import Navbar from "./NavBar";
+import Footer from "./Footer";
 import styled from "@emotion/styled";
 
 const LandingPagePicture = styled.div`
   background-image: url(${SunriseImage});
-  width: 100%;
   height: 500px;
   background-position: center;
   background-origin: content-box;
@@ -38,6 +38,7 @@ class LandingPage extends Component {
             culpa qui officia deserunt mollit anim id est laborum."
           </MissionText>
         </LandingPagePicture>
+        <Footer />
       </>
     );
   }

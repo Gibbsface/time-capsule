@@ -1,24 +1,19 @@
 import React, { Component } from "react";
 import "./App.css";
-import Navbar from "./Components/NavBar/NavBar";
-import Footer from "./Components/Footer/Footer";
-import LandingPage from "./Components/LandingPage/LandingPage";
+import LandingPage from "./Components/Body/LandingPage";
 import styled from "@emotion/styled";
 
-const PageContainer = styled.body`
+const PageContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: black;
 `;
 
 class App extends Component {
   render() {
-    //const { lightStatus } = this.state;
-
     return (
       <PageContainer>
         <LandingPage />
-        <Footer />
       </PageContainer>
     );
   }
