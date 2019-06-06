@@ -8,7 +8,6 @@ import styled from "@emotion/styled";
 
 const LandingPagePicture = styled.div`
   background-image: url(${SunriseImage});
-  width: 100%;
   height: 500px;
   background-position: center;
   background-origin: content-box;
