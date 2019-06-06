@@ -12,7 +12,7 @@ import GalleryPage from "./Components/Pages/Gallery/GalleryPage";
 const PageContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: white;
+  background: dark-gray;
 `;
 
 class App extends Component {

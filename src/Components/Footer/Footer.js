@@ -20,7 +20,6 @@ const FooterContainer = styled.div`
 const Footer = () => {
   return (
     <FooterContainer>
-      <hr />
       <div>Pretend that there is copyright info here</div>
     </FooterContainer>
   );
