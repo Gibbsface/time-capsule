@@ -1,5 +1,6 @@
 // This is the navbar component
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 const NavbarContainer = styled.div`
@@ -28,7 +29,7 @@ const LinkList = styled.div`
   justify-content: space-between;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   background-color: transparent;
   border: 0px;
   cursor: pointer;
@@ -48,11 +49,11 @@ const Navbar = () => {
       <LogoContainer>Pretend there's a logo here</LogoContainer>
       <hr />
       <LinkList>
-        <Button>Map</Button>
-        <Button>Florida</Button>
-        <Button>Kingdom</Button>
-        <Button>Calendar</Button>
-        <Button>Gallery</Button>
+        <Button to='/about'>About</Button>
+        <Button to='/map'>Map</Button>
+        <Button to='/kingdom'>Kingdom</Button>
+        <Button to='/calendar'>Calendar</Button>
+        <Button to='/gallery'>Gallery</Button>
       </LinkList>
     </NavbarContainer>
   );
