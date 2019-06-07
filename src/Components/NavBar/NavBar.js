@@ -7,7 +7,7 @@ import Logo from "../../Images/Logo.png";
 const NavbarContainer = styled.div`
   background-color: #ffffff;
   position: 0 0;
-  margin: auto;
+  margin: 0;
   padding-top: 15px;
   padding-right: 7%;
   padding-left: 7%;

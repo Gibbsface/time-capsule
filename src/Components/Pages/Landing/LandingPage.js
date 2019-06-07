@@ -2,46 +2,55 @@
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import React, { Component } from "react";
-import SunriseImage from "../../../Images/Sunrise.jpeg";
+import SunriseImage from "../../../Images/Pretty/DisneySprings_0_5.31.19.jpg";
 import styled from "@emotion/styled";
 
-const LandingPagePicture = styled.div`
+const LandingPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+`;
+
+const HomePage = styled.div`
   background-image: url(${SunriseImage});
-  height: 500px;
   background-position: center;
   background-origin: content-box;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: 100px;
+
+  height: 600px;
 `;
 
-const MissionText = styled.p`
-  opacity: 1;
-  color: white;
-  font-size: 24px;
-  padding-right: 7%;
-  padding-left: 7%;
-  width: 86%;
+const Welcome = styled.div`
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+`;
+
+const IntroText = styled.div`
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
 `;
 
 class LandingPage extends Component {
   render() {
     return (
-      <>
+      <LandingPageContainer className='landing-page-container'>
         <Navbar />
-        <LandingPagePicture>
-          <MissionText>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </MissionText>
-        </LandingPagePicture>
+        <HomePage>
+          <Welcome>Welcome</Welcome>
+          <IntroText>
+            "here we will put an excelent introduction to our website"
+          </IntroText>
+        </HomePage>
         <Footer />
-      </>
+      </LandingPageContainer>
     );
   }
 }
