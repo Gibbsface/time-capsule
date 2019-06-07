@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import Navbar from "../../NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 
 class CalendarPage extends Component {
   render() {
-    return <div>Hello World! Welcome to the Calendar</div>;
+    return (
+      <>
+        <Navbar />
+        <Footer />
+      </>
+    );
   }
 }
 

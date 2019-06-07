@@ -9,9 +9,9 @@ const NavbarContainer = styled.div`
   position: 0 0;
   margin: auto;
   padding-top: 15px;
-  padding-right: 15%;
-  padding-left: 15%;
-  width: 70%;
+  padding-right: 7%;
+  padding-left: 7%;
+  width: 86%;
   height: 125px;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,6 @@ const LogoContainer = styled(Link)`
   background-image: url(${Logo});
   height: 180px;
   width: 120px;
-  padding-bottom: 15px;
   display: flex;
   justify-content: flex-start;
   background-position: center;
@@ -30,9 +29,9 @@ const LogoContainer = styled(Link)`
   background-repeat: no-repeat;
 `;
 
-const LinkList = styled.div`
+const LinkContainer = styled.div`
   background-color: transparent;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 `;
@@ -42,9 +41,8 @@ const Button = styled(Link)`
   border: 0px;
   cursor: pointer;
   color: #666062;
-  font-family: Freight Sans Pro Book;
-  font-size: 20px;
-  padding: 5px 5px;
+  font-size: 30px;
+  padding: 10px;
   text-decoration: none;
   :hover {
     color: #f9b625;
@@ -53,15 +51,15 @@ const Button = styled(Link)`
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
+    <NavbarContainer className='navbar-container'>
       <LogoContainer to='/' />
-      <LinkList>
+      <LinkContainer>
         <Button to='/about'>About</Button>
         <Button to='/map'>Map</Button>
         <Button to='/kingdom'>Kingdom</Button>
         <Button to='/calendar'>Calendar</Button>
         <Button to='/gallery'>Gallery</Button>
-      </LinkList>
+      </LinkContainer>
     </NavbarContainer>
   );
 };

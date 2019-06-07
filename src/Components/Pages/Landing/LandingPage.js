@@ -19,6 +19,9 @@ const MissionText = styled.p`
   opacity: 1;
   color: white;
   font-size: 24px;
+  padding-right: 7%;
+  padding-left: 7%;
+  width: 86%;
 `;
 
 class LandingPage extends Component {
