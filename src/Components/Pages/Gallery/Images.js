@@ -35,7 +35,7 @@ const Week1OutreachBeach = [
     thumbnailWidth: 320,
     thumbnailHeight: 174,
     isSelected: false,
-    caption: "Abigail Gordon and Kelechi Cillis-Ihenko"
+    caption: "Abigail Gordon and Kelechi Chillis-Ihenko"
   },
   {
     src: Beach2,
@@ -95,7 +95,7 @@ const Week1OutreachBeach = [
     thumbnailHeight: 174,
     isSelected: false,
     caption:
-      "Justin Ward and Kelechi Cillis-Ihenko practicing going through the KGP"
+      "Justin Ward and Kelechi Chillis-Ihenko practicing going through the KGP"
   },
   {
     src: Training3,
