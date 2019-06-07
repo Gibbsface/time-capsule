@@ -7,7 +7,7 @@ import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
 import LocationPin from "../../Locations/LocationPins";
 import LOCATIONS from "../../Locations/locations.json";
-import INTERNS from "../../Interns/biography.json";
+import INTERNS from "../../Interns/Profile";
 const Info = styled.h1`
   font-size: 20 px;
   opacity: 3;
@@ -65,7 +65,9 @@ class AboutPage extends Component {
         >
           {LOCATIONS.map(this._renderLocationMarker)}
         </ReactMapGL>
-        <Bio />
+        <Bio>
+          <INTERNS />
+        </Bio>
         <Footer />
       </>
     );
