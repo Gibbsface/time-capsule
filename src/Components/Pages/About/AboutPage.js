@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
-import map from "react-map-gl";
 const Info = styled.h1`
   font-size: 30 px;
   opacity: 3;
