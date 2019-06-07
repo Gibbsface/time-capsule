@@ -2,17 +2,25 @@ import React, { Component } from "react";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
-import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
 import LocationPin from "../../Locations/LocationPins";
 import LOCATIONS from "../../Locations/locations.json";
+import INTERNS from "../../Interns/biography.json";
 const Info = styled.h1`
   font-size: 20 px;
   opacity: 3;
   width: 100%;
   text-align: center;
   text-size: 20 px;
+`;
+const Bio = styled.p`
+  font-size: 10 px;
+  opacity: 2;
+  width: 20%;
+  text-align: left;
+  text-size: 10 px;
 `;
 class AboutPage extends Component {
   state = {
@@ -57,6 +65,7 @@ class AboutPage extends Component {
         >
           {LOCATIONS.map(this._renderLocationMarker)}
         </ReactMapGL>
+        <Bio />
         <Footer />
       </>
     );
