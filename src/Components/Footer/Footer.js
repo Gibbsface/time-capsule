@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 import Fb from "../../Images/fb_logo.png";
 import Ig from "../../Images/ig_logo.png";
 
+const curryear = new Date().getFullYear();
+
 const FooterContainer = styled.div`
   background-color: #666062;
   height: 60px;
@@ -33,6 +35,7 @@ const Text = styled.div``;
 const SocialContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: -5px;
 `;
 
 const FbLogo = styled.div`
@@ -75,7 +78,7 @@ const Footer = () => {
     <FooterContainer>
       <Bar />
       <Copyright>
-        <Text>© 2019 Cru. All Rights Reserved.</Text>
+        <Text>© {curryear} Cru. All Rights Reserved.</Text>
         <SocialContainer>
           <FbLogo />
           <InstaLogo />
