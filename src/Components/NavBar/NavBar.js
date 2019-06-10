@@ -6,8 +6,7 @@ import Logo from "../../Images/Logo.png";
 
 const NavbarContainer = styled.div`
   background-color: #ffffff;
-  position: 0 0;
-  margin: auto;
+  margin: 0;
   padding-top: 15px;
   padding-right: 7%;
   padding-left: 7%;
@@ -31,7 +30,6 @@ const LogoContainer = styled(Link)`
 
 const LinkContainer = styled.div`
   background-color: transparent;
-  width: 90%;
   display: flex;
   justify-content: space-between;
 `;

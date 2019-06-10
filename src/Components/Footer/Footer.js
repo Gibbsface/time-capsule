@@ -4,11 +4,13 @@ import styled from "@emotion/styled";
 
 const FooterContainer = styled.div`
   background-color: #666062;
-  position: 0% 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   height: 80px;
-
   padding-right: 7%;
   padding-left: 7%;
   width: 86%;
