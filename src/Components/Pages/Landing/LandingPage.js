@@ -36,6 +36,11 @@ const IntroText = styled.div`
   text-align: center;
   font-size: 20px;
   color: #ffffff;
+  font-style: italic;
+`;
+
+const Box = styled.div`
+  height: 250px;
 `;
 
 class LandingPage extends Component {
@@ -44,10 +49,10 @@ class LandingPage extends Component {
       <LandingPageContainer className='landing-page-container'>
         <Navbar />
         <HomePage>
+          <Box />
           <Welcome>Welcome</Welcome>
-          <IntroText>
-            "here we will put an excelent introduction to our website"
-          </IntroText>
+          <IntroText>Cru HQ Summer Internship 2019</IntroText>
+          <Box />
         </HomePage>
         <Footer />
       </LandingPageContainer>
