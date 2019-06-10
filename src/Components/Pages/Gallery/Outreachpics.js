@@ -19,8 +19,6 @@ import Training11 from "../../../Images/BeachOutreach/6.1.19/Training11.jpg";
 import Training12 from "../../../Images/BeachOutreach/6.1.19/Training12.jpg";
 import Training13 from "../../../Images/BeachOutreach/6.1.19/Training13.jpg";
 import Training14 from "../../../Images/BeachOutreach/6.1.19/Training14.jpg";
-import AppleCrisp from "../../../Images/Fun/AppleCrisp6.1.19.jpg";
-import Worship0 from "../../../Images/Fun/Worship05.30.19.jpg";
 
 const Week1OutreachBeach = [
   {
@@ -199,23 +197,6 @@ const Week1OutreachBeach = [
     thumbnailHeight: 174,
     isSelected: false,
     caption: "Ben Rivera and Jizhou Zhang reading the KGP together"
-  },
-  {
-    src: AppleCrisp,
-    thumbnail: AppleCrisp,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption:
-      "Everyone joins together to play some cards and eat some Apple Crisp"
-  },
-  {
-    src: Worship0,
-    thumbnail: Worship0,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption: "Gathering together for some praise and worship"
   }
 ];
 
