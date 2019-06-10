@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
-import styled from "@emotion/styled";
 import ReactMapGL, { Marker } from "react-map-gl";
-import cellEditFactory, { Type } from "react-bootstrap-table-next";
 import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
 import LocationPin from "../../Locations/LocationPins";
 import LOCATIONS from "../../Locations/locations.json";
+import MAP_STYLE from "../../../config/map_config.json";
 import INTERNS from "../../Interns/Profile";
+import styled from "@emotion/styled";
 const Info = styled.h1`
   font-size: 20 px;
   opacity: 3;
@@ -19,14 +20,22 @@ const Info = styled.h1`
 const Intern = styled.h2`
   font-size: 10 px;
   opacity: 2;
-  text-align: left;
   text-size: 20 px;
 `;
 const Bio = styled.p`
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 10%;
-  padding-left: 10%;
+  transform: [{ rotate: '90deg'}];
+`;
+
+const GridContainer = styled.div`
+  width: 86%;
+  margin: 0 auto;
+  display: grid;
+
+  padding: 1rem;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-row-gap: 1rem;
 `;
 class AboutPage extends Component {
   state = {
@@ -39,9 +48,6 @@ class AboutPage extends Component {
     },
     popupInfo: null
   };
-  componentDidMount() {
-    console.log(TOKEN.MAPBOX_ACCESS_TOKEN);
-  }
   _renderLocationMarker = (location, index) => {
     return (
       <Marker
@@ -65,60 +71,66 @@ class AboutPage extends Component {
           the summer at Cru HQ.
         </Info>
         <ReactMapGL
+          mapStyle={MAP_STYLE.MAP_STYLE_LINK}
           mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
           {...this.state.viewport}
           onViewportChange={viewport => this.setState({ viewport })}
         >
           {LOCATIONS.map(this._renderLocationMarker)}
         </ReactMapGL>
-        <Intern>
-          Jizhou
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Cole
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Callie
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Emily
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          David
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Kellechi
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Justin
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Abi
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Jessica
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Brittany
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Donovan
-          <Bio>txt</Bio>
-        </Intern>
-        <Intern>
-          Johnny
-          <Bio>txt</Bio>
-        </Intern>
+        <GridContainer>
+          <div>
+            <Intern>Jizhou</Intern>
+            <Bio>
+              This is my project. Testing Testing Testing Testing Testing
+            </Bio>
+          </div>
+          <div>
+            <Intern>Cole</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Callie</Intern> <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Emily</Intern> <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>David</Intern> <Bio>txt</Bio>
+          </div>
+          <div>
+            {" "}
+            <Intern>Kellechi</Intern> <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Justin</Intern> <Bio>txt</Bio>
+          </div>
+          <div>
+            {" "}
+            <Intern>Abi</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Laci</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Danny</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Brittany</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Johnny</Intern>
+            <Bio>txt</Bio>
+          </div>
+          <div>
+            <Intern>Donovan</Intern>
+            <Bio>txt</Bio>
+          </div>
+        </GridContainer>
         <Footer />
       </>
     );
