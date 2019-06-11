@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+//import { Container, Row, Col } from "reactstrap";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import ReactMapGL, { Marker } from "react-map-gl";
@@ -8,7 +8,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import LocationPin from "../../Locations/LocationPins";
 import LOCATIONS from "../../Locations/locations.json";
 import MAP_STYLE from "../../../config/map_config.json";
-import INTERNS from "../../Interns/Profile";
+//import INTERNS from "../../Interns/Profile";
 import styled from "@emotion/styled";
 const Info = styled.h1`
   font-size: 20 px;
