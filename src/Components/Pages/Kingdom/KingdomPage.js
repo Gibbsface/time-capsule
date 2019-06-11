@@ -3,7 +3,30 @@ import styled from "@emotion/styled";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 
-const Cposts = styled.div`
+const title = [`Title 1`, `Title 2`, `Title 3`];
+const story = [
+  `Hydrogen stratosphere control tower capacitor Saturn Lalande
+  21185. Control tower x-rays Luhman 16 Banard's Star engine lunar.
+  Horizon engine capture Pluto Brahe sun continuum ion-drive control
+  tower Proxima Centauri space-time booster. Core horizon subspace
+  Voyager coordinates water. Contractors Banard's Star nozzle time
+  Orion weightless Gemini extra-vehicular explore.`,
+
+  `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+  aliquip ex ea commodo consequat. Duis aute irure dolor in
+  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+  culpa qui officia deserunt mollit anim id est laborum.`,
+
+  `Challenger Voyager Sirius capsule Pioneer Kepler hyperspace
+  launch. Singularity extra-vehicular circumnavigate burst. Procyon
+  fuel cell asteroid subspace uranium Proxima Centauri prototype
+  capsule.`
+];
+
+const PostContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: top;
@@ -13,8 +36,9 @@ const Cposts = styled.div`
   border: solid blue;
 `;
 
-const Cposts_item = styled.div`
+const Post = styled.div`
   flex-grow: 1;
+  border: dashed white;
 
   :first-child {
     flex-grow: 2;
@@ -67,46 +91,20 @@ class KingdomPage extends Component {
     return (
       <>
         <Navbar />
-        <Cposts className='c-posts'>
-          <Cposts_item className='c-posts__item'>
-            <h2>Article Title Here</h2>
-            <p>
-              Hydrogen stratosphere control tower capacitor Saturn Lalande
-              21185. Control tower x-rays Luhman 16 Banard's Star engine lunar.
-              Horizon engine capture Pluto Brahe sun continuum ion-drive control
-              tower Proxima Centauri space-time booster. Core horizon subspace
-              Voyager coordinates water. Contractors Banard's Star nozzle time
-              Orion weightless Gemini extra-vehicular explore.
-            </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
-            <h2>Article Title Here</h2>
-            <p>
-              Mars NASA subspace crew warp Herschel stratosphere. Saturn sky
-              zero-g stratosphere fuel cell Venus grounded crew yaw Ptolemy
-              Challenger. Pioneer stratosphere Cassini Lalande 21185 Earth
-              telemetry. Galileo uranium jumpsuit warp Hawking.
-            </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
-            <h2>Article Title Here</h2>
-            <p>
-              Challenger Voyager Sirius capsule Pioneer Kepler hyperspace
-              launch. Singularity extra-vehicular circumnavigate burst. Procyon
-              fuel cell asteroid subspace uranium Proxima Centauri prototype
-              capsule.
-            </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
+        <PostContainer className='c-posts'>
+          <Post className='c-posts__item'>
+            <h2>{title[0]}</h2>
+            <p>{story[0]}</p>
+          </Post>
+          <Post className='c-posts__item'>
+            <h2>{title[1]}</h2>
+            <p>{story[1]}</p>
+          </Post>
+          <Post className='c-posts__item'>
+            <h2>{title[2]}</h2>
+            <p>{story[2]}</p>
+          </Post>
+          <Post className='c-posts__item'>
             <h2>Article Title Here</h2>
             <p>
               Capsule crew Discovery ice spacecraft Pioneer gravity Picard.
@@ -115,21 +113,15 @@ class KingdomPage extends Component {
               cosmos zero-g Pluto Skunkworks hatch. Circumnavigate core
               hyperspace motion comet Ptolemy.
             </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
+          </Post>
+          <Post className='c-posts__item'>
             <h2>Article Title Here</h2>
             <p>
               Orbit warp atomic Buzz Lightyear. Uranium circumnavigate Halley
               Neptune nebula launch north Proxima Centauri engine.
             </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
+          </Post>
+          <Post className='c-posts__item'>
             <h2>Article Title Here</h2>
             <p>
               Troposphere capacitor Newton Kepler. Jupiter ionosphere saucer
@@ -139,11 +131,8 @@ class KingdomPage extends Component {
               laser. Columbia nebula horizon mesoshphere pulsar mission nuclear
               Sirius jetpack UFO.
             </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-          <Cposts_item className='c-posts__item'>
+          </Post>
+          <Post className='c-posts__item'>
             <h2>Article Title Here</h2>
             <p>
               X-rays Orion capsule re-entry Mercury tank capture Mars control
@@ -151,11 +140,8 @@ class KingdomPage extends Component {
               flare telemetry yaw rocket stars. Planet astronomy Venus reusable
               continuum inertia robotic re-entry booster Pioneer.
             </p>
-            <p>
-              <a href='#'>Read More</a>
-            </p>
-          </Cposts_item>
-        </Cposts>
+          </Post>
+        </PostContainer>
         <Prayer>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
