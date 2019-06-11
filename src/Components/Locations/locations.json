@@ -5,5 +5,12 @@
     "state": "New York",
     "latitude": 40.6643,
     "longitude": -73.9385
+  },
+  {
+    "location": "Rochester Hills",
+    "population": "2,000,000",
+    "state": "Michigan",
+    "latitude": 42.652401,
+    "longitude": -83.132561
   }
 ]
