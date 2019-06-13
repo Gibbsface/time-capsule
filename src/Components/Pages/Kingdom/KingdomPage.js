@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "@emotion/styled";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
-import Memories from "./memories.json";
+import Memories from "../../../memories.json";
 import _ from "lodash";
 
 const Stories = Memories.Stories;
