@@ -1,9 +1,11 @@
 {
-  "Stories": [
+  "Memories": [
     {
       "id": 1,
-      "title": "Title 1",
-      "body": "Hydrogen stratosphere control tower capacitor Saturn Lalande 21185. Control tower x-rays Luhman 16 Banard's Star engine lunar. Horizon engine capture Pluto Brahe sun continuum ion-drive control tower Proxima Centauri space-time booster. Core horizon subspace Voyager coordinates water. Contractors Banard's Star nozzle time Orion weightless Gemini extra-vehicular explore.'"
+      "title": "Scavenger Hunt",
+      "tags": ["Scavenger", "Fun"],
+      "location-lat": 0,
+      "location-long": 0
     },
     {
       "id": 2,

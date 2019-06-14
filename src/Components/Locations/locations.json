@@ -1,9 +1,93 @@
 [
   {
-    "location": "New York",
+    "location": "Buffalo",
     "population": "1,220,342",
     "state": "New York",
-    "latitude": 40.6643,
-    "longitude": -73.9385
+    "latitude": 42.886448,
+    "longitude": -78.878372
+  },
+  {
+    "location": "Rochester Hills",
+    "population": "2,000,000",
+    "state": "Michigan",
+    "latitude": 42.652401,
+    "longitude": -83.132561
+  },
+  {
+    "location": "Houston",
+    "population": "2,000,000",
+    "state": "Texas",
+    "latitude": 29.760427,
+    "longitude": -95.369804
+  },
+  {
+    "location": "Columbia",
+    "population": "1,220,342",
+    "state": "South Carolina",
+    "latitude": 34.00071,
+    "longitude": -81.034813
+  },
+  {
+    "location": "Davidson",
+    "population": "2,000,000",
+    "state": "North Carolina",
+    "latitude": 35.499249,
+    "longitude": -80.848488
+  },
+  {
+    "location": "Elkridge",
+    "population": "2,000,000",
+    "state": "Maryland",
+    "latitude": 39.207069,
+    "longitude": -76.727173
+  },
+  {
+    "location": "San Diego",
+    "population": "2,000,000",
+    "state": "California",
+    "latitude": 32.715736,
+    "longitude": -117.099115
+  },
+  {
+    "location": "Bristow",
+    "population": "2,000,000",
+    "state": "Virginia",
+    "latitude": 38.735039,
+    "longitude": -77.541939
+  },
+  {
+    "location": "Luis Obispo",
+    "population": "2,000,000",
+    "state": "California",
+    "latitude": 35.282753,
+    "longitude": -120.659615
+  },
+  {
+    "location": "Chicago",
+    "population": "2,000,000",
+    "state": "Illinois",
+    "latitude": 41.878113,
+    "longitude": -87.629799
+  },
+  {
+    "location": "Placerville",
+    "population": "2,000,000",
+    "state": "California",
+    "latitude": 38.729626,
+    "longitude": -120.798546
+  },
+  {
+    "location": "Colton",
+    "population": "2,000,000",
+    "state": "California",
+    "latitude": 34.070141,
+    "longitude": -117.323639
+  },
+  {
+    "location": "Stow",
+    "population": "2,000,000",
+    "state": "Ohio",
+    "latitude": 41.168831,
+    "longitude": -81.440369
   }
 ]
