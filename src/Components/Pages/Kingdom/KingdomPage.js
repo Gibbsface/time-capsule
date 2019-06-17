@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import styled from "@emotion/styled";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
-import Memories from "../../../memories.json";
+import Memories from "../../../Directory/memories.js";
 import _ from "lodash";
-
-const Stories = Memories.Stories;
 
 const PostContainer = styled.div`
   display: flex;
@@ -71,11 +69,11 @@ class KingdomPage extends Component {
       <>
         <Navbar />
         <PostContainer className='c-posts'>
-          {_.map(Stories, Story => {
+          {_.map(Memories, Story => {
             return (
               <Post key={Story.id}>
                 <h2>{Story.title}</h2>
-                <p>{Story.body}</p>
+                <p>{Story.story}</p>
               </Post>
             );
           })}

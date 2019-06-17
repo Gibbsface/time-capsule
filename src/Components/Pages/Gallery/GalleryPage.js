@@ -3,8 +3,7 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Gallery from "react-grid-gallery";
-import Week1OutreachBeach from "./Outreachpics";
-import FunWeek from "./Funpics";
+import Memories from "../../../Directory/memories.js";
 
 const Titles = styled.div`
   background-color: transparent;
@@ -27,6 +26,9 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
+//TODO: use lodash to map through all memories to display pictures,
+// then use ternary operators to look at the tags, find if it matches, then choose to display it
+
 class GalleryPage extends Component {
   render() {
     return (
@@ -35,18 +37,12 @@ class GalleryPage extends Component {
         <PageContainer>
           <section-container>
             <Titles>
-              {"\n"} Beach Outreach & Training {"\n"}
+              {"\n"} {Memories[0].title} {"\n"}
             </Titles>
-            <Gallery images={Week1OutreachBeach} />
+            <Gallery images={Memories[0].photos} />
             <Titles>
               {"\n"} {"\n"}
             </Titles>
-          </section-container>
-          <section-container>
-            <Titles>
-              {"\n"}FUN{"\n"}
-            </Titles>
-            <Gallery images={FunWeek} />
           </section-container>
         </PageContainer>
 
