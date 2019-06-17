@@ -11,6 +11,18 @@ const Info = styled.h3`
   text-align: center;
   text-size: 20 px;
 `;
+const Record = styled.div`
+  padding: 15;
+  width: 100%;
+  height: 300px;
+  background-color: cyan;
+  text-align: center;
+`;
+const Columntext = styled.div`
+  column-count: 2;
+  column-gap: 40px;
+  column-rule-style: solid;
+`;
 export default class CalendarPage extends Component {
   render() {
     return (
@@ -21,9 +33,35 @@ export default class CalendarPage extends Component {
           that happened with our 2019 summer intern team.
         </Info>
         <Swipe enableMouseEvents>
-          <div>Week 1</div>
-          <div>Week 2</div>
-          <div>Week 3</div>
+          <Record>
+            <h1>Week 1</h1>
+            <Columntext>
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing testing testing testing
+              testing testing testing testing testing
+            </Columntext>
+          </Record>
+          <Record>
+            <h1>Week 2</h1>
+            <Columntext>testing testing testing testing testing</Columntext>
+          </Record>
+          <Record>
+            <p>Week 3</p>
+            <Columntext>testing testing testing testing testing</Columntext>
+          </Record>
         </Swipe>
         <Footer />
       </>
