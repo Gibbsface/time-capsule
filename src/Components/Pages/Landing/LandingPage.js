@@ -2,7 +2,7 @@
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import React, { Component } from "react";
-import SunriseImage from "../../../Images/Pretty/DisneySprings0.jpg";
+import SunriseImage from "../../../Images/Landing.jpg";
 import styled from "@emotion/styled";
 
 const LandingPageContainer = styled.div`

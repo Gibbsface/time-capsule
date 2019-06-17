@@ -47,7 +47,6 @@ class GalleryPage extends Component {
             ) : null;
           })}
         </PageContainer>
-
         <Footer />
       </>
     );
