@@ -22,6 +22,18 @@ import CBeachTraining12 from "../Images/BeachOutreach/6.1.19/Training12.jpg";
 import CBeachTraining13 from "../Images/BeachOutreach/6.1.19/Training13.jpg";
 import CBeachTraining14 from "../Images/BeachOutreach/6.1.19/Training14.jpg";
 
+import DisneySprings0 from "../Images/Pretty/DisneySprings0.jpg";
+import DisneySprings1 from "../Images/Fun/DisneySprings1.jpg";
+import DisneySprings2 from "../Images/Fun/DisneySprings2.jpg";
+import DisneySprings3 from "../Images/Fun/DisneySprings3.jpg";
+import DisneySprings4 from "../Images/Fun/DisneySprings4.jpg";
+import DisneySprings5 from "../Images/Fun/DisneySprings5.jpg";
+import DisneySprings6 from "../Images/Fun/DisneySprings6.jpg";
+import DisneySprings7 from "../Images/Fun/DisneySprings7.jpg";
+import DisneySprings8 from "../Images/Fun/DisneySprings8.jpg";
+import DisneySprings9 from "../Images/Fun/DisneySprings9.jpg";
+import DisneySprings10 from "../Images/Fun/DisneySprings10.jpg";
+
 const Memories = data.Memories;
 
 const CBeachOutreachPhotos = [
@@ -195,6 +207,98 @@ const CBeachOutreachPhotos = [
   }
 ];
 
+const DisneySpringsPhotos = [
+  {
+    src: DisneySprings0,
+    thumbnail: DisneySprings0,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings1,
+    thumbnail: DisneySprings1,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings2,
+    thumbnail: DisneySprings2,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings3,
+    thumbnail: DisneySprings3,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings4,
+    thumbnail: DisneySprings4,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings5,
+    thumbnail: DisneySprings5,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings6,
+    thumbnail: DisneySprings6,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings7,
+    thumbnail: DisneySprings7,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings8,
+    thumbnail: DisneySprings8,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings9,
+    thumbnail: DisneySprings9,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  },
+  {
+    src: DisneySprings10,
+    thumbnail: DisneySprings10,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: false,
+    caption: "test test test"
+  }
+];
+
 Memories[0].photos = CBeachOutreachPhotos;
+Memories[1].photos = DisneySpringsPhotos;
 
 export default Memories;
