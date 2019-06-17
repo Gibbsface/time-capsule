@@ -219,7 +219,7 @@ class AboutPage extends Component {
             <Bio>
               Jizhou is from Rochester Hills of Metro Detroit, Michigan. He's a
               computer science major from Oakland University. He works in the
-              DPS department.
+              Digital Product and Service department.
             </Bio>
           </div>
           <div>
@@ -227,8 +227,8 @@ class AboutPage extends Component {
             <Intern>Cole Gibbs</Intern>
             <Bio>
               Cole is from Houston, Texas. He goes to the University of Houston.
-              He is a computer science major and works in the DPS department of
-              HQ.
+              He is a computer science major and works in the Digital Product
+              and Service department of HQ.
             </Bio>
           </div>
           <div>
@@ -271,9 +271,9 @@ class AboutPage extends Component {
             <Justin />
             <Intern>Justin Ward</Intern>{" "}
             <Bio>
-              Justin is from San Diego, California. Justin is a finance major
-              from the University of San Diego and is part of the finance team
-              at HQ.
+              Justin is from San Diego, California. Justin is a accounting major
+              from the San Diego State University and is part of the financial
+              service group in accounting department at HQ.
             </Bio>
           </div>
           <div>
@@ -306,12 +306,18 @@ class AboutPage extends Component {
           <div>
             <Brittany />
             <Intern>Brittany B Jones</Intern>
-            <Bio>Brittany is from Chicago, Illinois</Bio>
+            <Bio>
+              Brittany is from Chicago, Illinois. She is a marketing major at
+              Harper College. She is part of the marketing department.
+            </Bio>
           </div>
           <div>
             <Johnny />
             <Intern>Johnny Lam</Intern>
-            <Bio>Johnny is from Stow, Ohio</Bio>
+            <Bio>
+              Johnny is from Stow, Ohio. He is an audio engineering major at
+              Kent State University. He is part of the Jesus Film team at HQ.
+            </Bio>
           </div>
           <div>
             <Donovan />
@@ -321,12 +327,20 @@ class AboutPage extends Component {
           <div>
             <Jessica />
             <Intern>Jessica</Intern>
-            <Bio>Jessica is from Placerville, California</Bio>
+            <Bio>
+              Jessica is from Davis, California. She studies Cinema and Digital
+              Media at the University of California, Davis and is part of the
+              Marketing team.
+            </Bio>
           </div>
           <div>
             <Chun />
             <Intern>Chun</Intern>
-            <Bio>Chun is from Colton, California</Bio>
+            <Bio>
+              Chun is from Kaohsiung, Taiwan. He majored in accounting and
+              finance at Cal State San Bernardino. He works for the Financial
+              Service group in the Ministry Finance department.
+            </Bio>
           </div>
         </GridContainer>
         <Footer />
