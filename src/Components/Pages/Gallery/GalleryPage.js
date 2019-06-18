@@ -38,11 +38,15 @@ class GalleryPage extends Component {
         <PageContainer>
           {_.map(Memories, Story => {
             return Story.photos != null ? (
-              <section-container>
-                <Titles>
+              <section-container key={"gallery_" + Story.id}>
+                <Titles key={"title_" + Story.id}>
                   {"\n"} {Story.title} {"\n"}
                 </Titles>
-                <Gallery images={Story.photos} />
+                <Gallery
+                  key={"images_" + Story.id}
+                  images={Story.photos}
+                  enableImageSelection={false}
+                />
               </section-container>
             ) : null;
           })}
