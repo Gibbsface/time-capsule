@@ -4,6 +4,7 @@ import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Gallery from "react-grid-gallery";
 import Memories from "../../../Directory/memories.js";
+import _ from "lodash";
 
 const Titles = styled.div`
   background-color: transparent;
@@ -35,17 +36,21 @@ class GalleryPage extends Component {
       <>
         <Navbar />
         <PageContainer>
-          <section-container>
-            <Titles>
-              {"\n"} {Memories[0].title} {"\n"}
-            </Titles>
-            <Gallery images={Memories[0].photos} />
-            <Titles>
-              {"\n"} {"\n"}
-            </Titles>
-          </section-container>
+          {_.map(Memories, Story => {
+            return Story.photos != null ? (
+              <section-container key={"gallery_" + Story.id}>
+                <Titles key={"title_" + Story.id}>
+                  {"\n"} {Story.title} {"\n"}
+                </Titles>
+                <Gallery
+                  key={"images_" + Story.id}
+                  images={Story.photos}
+                  enableImageSelection={false}
+                />
+              </section-container>
+            ) : null;
+          })}
         </PageContainer>
-
         <Footer />
       </>
     );
