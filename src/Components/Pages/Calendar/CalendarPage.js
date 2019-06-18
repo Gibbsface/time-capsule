@@ -16,7 +16,6 @@ const Record = styled.div`
   width: 100%;
   height: 300px;
   background-color: cyan;
-  text-align: center;
 `;
 const Columntext = styled.div`
   column-count: 2;
@@ -59,7 +58,7 @@ export default class CalendarPage extends Component {
             <Columntext>testing testing testing testing testing</Columntext>
           </Record>
           <Record>
-            <p>Week 3</p>
+            <h1>Week 3</h1>
             <Columntext>testing testing testing testing testing</Columntext>
           </Record>
         </Swipe>
