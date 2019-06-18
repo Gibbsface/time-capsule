@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
-import Gallery from "react-grid-gallery";
 import Memories from "../../../Directory/memories.js";
+import Lightbox from "./Lightbox.js";
 import _ from "lodash";
 
 const PageContainer = styled.div`
@@ -11,11 +11,6 @@ const PageContainer = styled.div`
   padding-left: 7%;
   width: 86%;
   padding-top: 15px;
-`;
-
-const AlbumContainer = styled.img`
-  background-color: red;
-  width: 100%;
 `;
 
 //TODO: use lodash to map through all memories to display pictures,
@@ -27,13 +22,9 @@ class GalleryPage extends Component {
       <>
         <Navbar />
         <PageContainer>
-          {_.map(Memories, Story => {
-            return Story.photos != null ? (
-              <AlbumContainer
-                src={Story.photos[0].src}
-                alt='test test'
-                key={"album" + Story.id}
-              />
+          {_.map(Memories, s => {
+            return s.photos != null ? (
+              <Lightbox photos={s.photos} label={s.title} />
             ) : null;
           })}
         </PageContainer>
