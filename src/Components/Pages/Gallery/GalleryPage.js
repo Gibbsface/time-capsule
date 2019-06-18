@@ -46,6 +46,7 @@ class GalleryPage extends Component {
                   key={"images_" + Story.id}
                   images={Story.photos}
                   enableImageSelection={false}
+                  maxRows={1}
                 />
               </section-container>
             ) : null;
