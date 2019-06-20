@@ -7,14 +7,18 @@ import Lightbox from "./Lightbox.js";
 import _ from "lodash";
 
 const PageContainer = styled.div`
-  padding-right: 7%;
-  padding-left: 7%;
+  margin-right: 7%;
+  margin-left: 7%;
   width: 86%;
-  padding-top: 15px;
-`;
+  padding-top: 50px;
 
-//TODO: use lodash to map through all memories to display pictures,
-// then use ternary operators to look at the tags, find if it matches, then choose to display it
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+`;
 
 class GalleryPage extends Component {
   render() {
@@ -24,7 +28,11 @@ class GalleryPage extends Component {
         <PageContainer>
           {_.map(Memories, s => {
             return s.photos != null ? (
-              <Lightbox photos={s.photos} label={s.title} />
+              <Lightbox
+                key={"Lightbox" + s.id}
+                photos={s.photos}
+                label={s.title}
+              />
             ) : null;
           })}
         </PageContainer>
