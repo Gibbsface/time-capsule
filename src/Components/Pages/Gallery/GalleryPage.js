@@ -2,30 +2,19 @@ import React, { Component } from "react";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
-import Gallery from "react-grid-gallery";
-import Week1OutreachBeach from "./Outreachpics";
-import FunWeek from "./Funpics";
-
-const Titles = styled.div`
-  background-color: transparent;
-  color: white;
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
-`;
+import Memories from "../../../Directory/memories.js";
+import Lightbox from "./Lightbox.js";
+import _ from "lodash";
 
 const PageContainer = styled.div`
-  background-color: #666062;
-  position: 0 0;
-  margin: auto;
   padding-right: 7%;
   padding-left: 7%;
   width: 86%;
   padding-top: 15px;
-
-  display: flex;
-  flex-direction: column;
 `;
+
+//TODO: use lodash to map through all memories to display pictures,
+// then use ternary operators to look at the tags, find if it matches, then choose to display it
 
 class GalleryPage extends Component {
   render() {
@@ -33,23 +22,12 @@ class GalleryPage extends Component {
       <>
         <Navbar />
         <PageContainer>
-          <section-container>
-            <Titles>
-              {"\n"} Beach Outreach & Training {"\n"}
-            </Titles>
-            <Gallery images={Week1OutreachBeach} />
-            <Titles>
-              {"\n"} {"\n"}
-            </Titles>
-          </section-container>
-          <section-container>
-            <Titles>
-              {"\n"}FUN{"\n"}
-            </Titles>
-            <Gallery images={FunWeek} />
-          </section-container>
+          {_.map(Memories, s => {
+            return s.photos != null ? (
+              <Lightbox photos={s.photos} label={s.title} />
+            ) : null;
+          })}
         </PageContainer>
-
         <Footer />
       </>
     );
@@ -57,3 +35,20 @@ class GalleryPage extends Component {
 }
 
 export default GalleryPage;
+
+// {_.map(Memories, Story => {
+//   return Story.photos != null ? (
+//     <section-container key={"gallery_" + Story.id}>
+//       <Titles key={"title_" + Story.id}>
+//         {"\n"} {Story.title} {"\n"}
+//       </Titles>
+//       <Gallery
+//         key={"images_" + Story.id}
+//         images={Story.photos}
+//         enableImageSelection={false}
+//         maxRows={1}
+//         backdropClosesModal={true}
+//       />
+//     </section-container>
+//   ) : null;
+// })}

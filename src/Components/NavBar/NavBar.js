@@ -14,6 +14,8 @@ const NavbarContainer = styled.div`
   height: 125px;
   display: flex;
   flex-direction: column;
+  border-bottom: solid #f9b625;
+  border-width: 4px;
 `;
 
 const LogoContainer = styled(Link)`
