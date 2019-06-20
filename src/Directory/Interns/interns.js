@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Interns } from "./interns.json";
 
 import Donovan_Image from "../../Images/InternProfile/donovan.jpg";
@@ -19,87 +17,6 @@ import David_Image from "../../Images/InternProfile/david.jpg";
 import Jizhou_Image from "../../Images/InternProfile/me.jpg";
 
 const InternList = Interns;
-
-const PHOTO_WIDTH = 320;
-const PHOTO_HEIGHT = 174;
-
-const internPhotos = [
-  {
-    src: Donovan_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Kellechi_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Laci_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Cole_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Abi_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Brittany_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Jessica_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Johnny_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Chun_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Emily_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Dan_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Callie_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Justin_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: David_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  },
-  {
-    src: Jizhou_Image,
-    thumbnailWidth: PHOTO_WIDTH,
-    thumbnailHeight: PHOTO_HEIGHT
-  }
-];
 
 InternList[0].photo = Donovan_Image;
 InternList[1].photo = Kellechi_Image;
