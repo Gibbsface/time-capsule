@@ -3,6 +3,10 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
+import data from "./dates.json";
+import _ from "lodash";
+
+const Weeks = data.Dates;
 const Info = styled.h3`
   font-size: 20 px;
   opacity: 3;
@@ -24,33 +28,16 @@ const Columntext = styled.div`
 `;
 export default class CalendarPage extends Component {
   createTable = () => {
-    let table = [];
-    for (let i = 0; i < 9; i++) {
-      table.push(
-        <Record>
-          <h1>{`Week ${i + 1}`}</h1>
-          <Columntext>
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing testing testing testing
-            testing testing testing testing testing
-          </Columntext>
+    let Array = [];
+    _.map(Weeks, week => {
+      Array.push(
+        <Record key={week.id}>
+          <h1>{week.title}</h1>
+          <Columntext>{week.bio}</Columntext>
         </Record>
       );
-    }
-    return table;
+    });
+    return Array;
   };
   render() {
     return (
