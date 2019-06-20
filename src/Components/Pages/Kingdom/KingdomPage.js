@@ -69,6 +69,9 @@ const Prayer = styled.div`
 
   text-align: center;
   font-style: italic;
+
+  background-color: #666062;
+  color: white;
 `;
 
 class KingdomPage extends Component {
