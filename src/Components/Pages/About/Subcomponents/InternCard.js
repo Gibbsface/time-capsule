@@ -37,15 +37,6 @@ const TextWrap = styled.img`
   margin-right: 7px;
 `;
 
-const DetailContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-left: auto;
-  > img {
-    margin-right: auto;
-  }
-`;
 const Bio = styled.p`
   margin-top: 0px;
 `;

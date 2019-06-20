@@ -26,16 +26,12 @@ class AboutPage extends Component {
     },
     popupInfo: null
   };
-  _renderLocationMarker = (location, index) => {
+  _renderLocationMarker = data => {
     return (
-      <Marker
-        key={`marker-${index}`}
-        longitude={location.longitude}
-        latitude={location.latitude}
-      >
+      <Marker key={data.id} longitude={data.longitude} latitude={data.latitude}>
         <LocationPin
           size={20}
-          onClick={() => this.setState({ popupinfo: location })}
+          onClick={() => this.setState({ popupinfo: data })}
         />
       </Marker>
     );
@@ -63,7 +59,7 @@ class AboutPage extends Component {
           </MapContainer>
           <CardContainer>
             {_.map(InternList, intern => {
-              return <InternCard cardData={intern} />;
+              return <InternCard cardData={intern} key={intern.id} />;
             })}
           </CardContainer>
         </PageContainer>
@@ -77,6 +73,7 @@ export default AboutPage;
 const CardContainer = styled.div`
   columns: 3;
   column-gap: 10px;
+  overflow: scroll;
 `;
 
 const Info = styled.h3`
