@@ -2,32 +2,23 @@ import React, { Component } from "react";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
-import Gallery from "react-grid-gallery";
 import Memories from "../../../Directory/memories.js";
-
-const Titles = styled.div`
-  background-color: transparent;
-  color: white;
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
-`;
+import Lightbox from "./Lightbox.js";
+import _ from "lodash";
 
 const PageContainer = styled.div`
-  background-color: #666062;
-  position: 0 0;
-  margin: auto;
-  padding-right: 7%;
-  padding-left: 7%;
+  margin-right: 7%;
+  margin-left: 7%;
   width: 86%;
-  padding-top: 15px;
+  padding-top: 50px;
 
   display: flex;
-  flex-direction: column;
-`;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
-//TODO: use lodash to map through all memories to display pictures,
-// then use ternary operators to look at the tags, find if it matches, then choose to display it
+  background-color: white;
+`;
 
 class GalleryPage extends Component {
   render() {
@@ -35,17 +26,16 @@ class GalleryPage extends Component {
       <>
         <Navbar />
         <PageContainer>
-          <section-container>
-            <Titles>
-              {"\n"} {Memories[0].title} {"\n"}
-            </Titles>
-            <Gallery images={Memories[0].photos} />
-            <Titles>
-              {"\n"} {"\n"}
-            </Titles>
-          </section-container>
+          {_.map(Memories, s => {
+            return s.photos != null ? (
+              <Lightbox
+                key={"Lightbox" + s.id}
+                photos={s.photos}
+                label={s.title}
+              />
+            ) : null;
+          })}
         </PageContainer>
-
         <Footer />
       </>
     );
@@ -53,3 +43,20 @@ class GalleryPage extends Component {
 }
 
 export default GalleryPage;
+
+// {_.map(Memories, Story => {
+//   return Story.photos != null ? (
+//     <section-container key={"gallery_" + Story.id}>
+//       <Titles key={"title_" + Story.id}>
+//         {"\n"} {Story.title} {"\n"}
+//       </Titles>
+//       <Gallery
+//         key={"images_" + Story.id}
+//         images={Story.photos}
+//         enableImageSelection={false}
+//         maxRows={1}
+//         backdropClosesModal={true}
+//       />
+//     </section-container>
+//   ) : null;
+// })}
