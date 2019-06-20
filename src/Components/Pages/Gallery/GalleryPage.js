@@ -10,7 +10,7 @@ const PageContainer = styled.div`
   margin-right: 7%;
   margin-left: 7%;
   width: 86%;
-  padding-top: 15px;
+  padding-top: 50px;
 
   display: flex;
   flex-wrap: wrap;

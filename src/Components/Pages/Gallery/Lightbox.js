@@ -10,8 +10,8 @@ const AlbumContainer = styled.div`
   margin: 10px 10px;
 
   border: solid #f9b625 5px;
-
   overflow: hidden;
+  cursor: pointer;
 `;
 
 const ImageInput = styled.input`
@@ -31,6 +31,7 @@ const Overlay = styled.div`
   opacity: 0;
   transition: 0.33s ease;
   background-color: #666062;
+
   :hover {
     opacity: 1;
   }
@@ -66,12 +67,8 @@ export default class LightboxComponent extends Component {
     return (
       <>
         <AlbumContainer>
-          <ImageInput
-            type='image'
-            src={this.props.photos[0].src}
-            onClick={() => this.setState({ isOpen: true })}
-          />
-          <Overlay>
+          <ImageInput type='image' src={this.props.photos[0].src} />
+          <Overlay onClick={() => this.setState({ isOpen: true })}>
             <OverText>{this.props.label}</OverText>
           </Overlay>
         </AlbumContainer>
