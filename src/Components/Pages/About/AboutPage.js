@@ -5,7 +5,6 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
 import LocationPin from "../../Locations/LocationPins";
-import LOCATIONS from "../../Locations/locations.json";
 import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
 import _ from "lodash";
