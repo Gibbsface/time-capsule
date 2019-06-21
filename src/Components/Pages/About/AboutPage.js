@@ -20,9 +20,9 @@ class AboutPage extends Component {
     viewport: {
       width: "60%",
       height: 700,
-      latitude: 39.381266,
-      longitude: -97.922211,
-      zoom: 3
+      latitude: 39.333212686504076,
+      longitude: -96.54699526694483,
+      zoom: 3.5
     },
     popupInfo: null
   };
@@ -53,8 +53,21 @@ class AboutPage extends Component {
               mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
               {...this.state.viewport}
               onViewportChange={viewport => this.setState({ viewport })}
+              scrollZoom={false}
             >
-              {LOCATIONS.map(this._renderLocationMarker)}
+              {_.map(InternList, pin => {
+                if (pin.latitude && pin.latitude) {
+                  return (
+                    <Marker
+                      key={pin.id}
+                      latitude={pin.latitude}
+                      longitude={pin.longitude}
+                    >
+                      <LocationPin size={20} />
+                    </Marker>
+                  );
+                }
+              })}
             </ReactMapGL>
             <CardContainer>
               {_.map(InternList, intern => {
