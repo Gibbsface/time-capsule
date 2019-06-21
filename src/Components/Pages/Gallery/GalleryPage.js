@@ -21,6 +21,8 @@ const PageContainer = styled.div`
   background-color: white;
 `;
 
+const VideoContainer = styled.div``;
+
 class GalleryPage extends Component {
   render() {
     return (
