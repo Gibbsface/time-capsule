@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "title": "First Campus Outreach",
+      "title": "Campus Outreach",
       "tags": ["Outreach", "Campus"],
       "location-lat": 28.746668,
       "location-long": -81.304595,
@@ -126,6 +126,26 @@
       "tags": ["Fun", "Beach"],
       "location-lat": 28.071636,
       "location-long": -80.558143,
+      "week": 3,
+      "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "photos": null
+    },
+    {
+      "id": 14,
+      "title": "Office Work",
+      "tags": ["Office"],
+      "location-lat": 28.406861,
+      "location-long": -81.202053,
+      "week": 0,
+      "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "photos": null
+    },
+    {
+      "id": 15,
+      "title": "Mini Golf",
+      "tags": ["Fun"],
+      "location-lat": 28.462662,
+      "location-long": -81.460677,
       "week": 3,
       "story": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
       "photos": null

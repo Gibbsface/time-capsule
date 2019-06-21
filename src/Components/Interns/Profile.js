@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import interns from "./biography.json";
 class Profile extends Component {
   constructor(props) {
@@ -29,5 +28,4 @@ class Profile extends Component {
     );
   }
 }
-
 export default Profile;
