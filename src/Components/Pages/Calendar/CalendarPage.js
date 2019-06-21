@@ -3,10 +3,10 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import data from "./dates.json";
+import data from "./Dates.js";
 import _ from "lodash";
-
-const Weeks = data.Dates;
+import Layout from "./Layout.js";
+const Weeks = data;
 const Info = styled.h3`
   font-size: 20 px;
   opacity: 3;
@@ -16,10 +16,13 @@ const Info = styled.h3`
   text-size: 20 px;
 `;
 const Record = styled.div`
-  padding: 15;
   width: 100%;
-  height: 300px;
-  background-color: tan;
+  height: 600px;
+  background-color: cyan;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 const Columntext = styled.div`
   column-count: 2;
@@ -29,12 +32,18 @@ const Columntext = styled.div`
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
+    // _.map(WeekPic, pic => {
+    //   Array.push(<Layout picture={pic} key={pic.id} />);
+    // });
     _.map(Weeks, week => {
       Array.push(
-        <Record key={week.id}>
-          <h1>{week.title}</h1>
-          <Columntext>{week.bio}</Columntext>
-        </Record>
+        <>
+          <Record key={week.id}>
+            <h1>{week.title}</h1>
+            <Columntext>{week.bio}</Columntext>
+            <Layout picture={week} key={week.id} />
+          </Record>
+        </>
       );
     });
     return Array;
