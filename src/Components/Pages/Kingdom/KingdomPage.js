@@ -12,12 +12,20 @@ const PostContainer = styled.div`
   margin-left: 7%;
   margine-right: 7%;
   width: 86%;
-  background: white;
+  background: #666062;
 `;
 
 const Post = styled.div`
+  background-color: white;
   padding-left: 5px;
   flex-grow: 1;
+  border-left: solid #3eb1c8 3px;
+  margin: 5px;
+
+  :hover {
+    border-left: solid #3eb1c8 8px;
+    margin-left: 0;
+  }
 
   :first-of-type {
     flex-grow: 2;
@@ -61,6 +69,9 @@ const Prayer = styled.div`
 
   text-align: center;
   font-style: italic;
+
+  background-color: #666062;
+  color: white;
 `;
 
 class KingdomPage extends Component {
