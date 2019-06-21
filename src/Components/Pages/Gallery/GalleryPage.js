@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import Memories from "../../../Directory/memories.js";
 import Lightbox from "./Lightbox.js";
 import _ from "lodash";
+import VideoPlayer from "./Videos";
 
 const PageContainer = styled.div`
   margin-right: 7%;
@@ -38,6 +39,9 @@ class GalleryPage extends Component {
             ) : null;
           })}
         </PageContainer>
+        <VideoContainer>
+          <VideoPlayer />
+        </VideoContainer>
         <Footer />
       </>
     );
