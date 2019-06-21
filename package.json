@@ -7,6 +7,7 @@
     "@emotion/styled": "^10.0.11",
     "@turf/random": "^6.0.2",
     "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -20,8 +21,7 @@
     "react-scripts": "3.0.1",
     "react-swipeable-views": "^0.13.3",
     "react-title-component": "^1.0.1",
-    "reactstrap": "^8.0.0",
-    "video-react": "^0.13.9"
+    "reactstrap": "^8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
