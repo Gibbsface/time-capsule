@@ -18,11 +18,11 @@ import InternCard from "../About/Subcomponents/InternCard.js";
 class AboutPage extends Component {
   state = {
     viewport: {
-      width: "100%",
+      width: "60%",
       height: 700,
-      latitude: 39.381266,
-      longitude: -97.922211,
-      zoom: 3
+      latitude: 39.333212686504076,
+      longitude: -96.54699526694483,
+      zoom: 3.5
     },
     popupInfo: null
   };
@@ -31,7 +31,7 @@ class AboutPage extends Component {
       <Marker key={data.id} longitude={data.longitude} latitude={data.latitude}>
         <LocationPin
           size={20}
-          onClick={() => this.setState({ popupinfo: data })}
+          onClick={() => this.setState({ popupInfo: data })}
         />
       </Marker>
     );
@@ -53,15 +53,28 @@ class AboutPage extends Component {
               mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
               {...this.state.viewport}
               onViewportChange={viewport => this.setState({ viewport })}
+              scrollZoom={false}
             >
-              {LOCATIONS.map(this._renderLocationMarker)}
+              {_.map(InternList, pin => {
+                if (pin.latitude && pin.latitude) {
+                  return (
+                    <Marker
+                      key={pin.id}
+                      latitude={pin.latitude}
+                      longitude={pin.longitude}
+                    >
+                      <LocationPin size={20} />
+                    </Marker>
+                  );
+                }
+              })}
             </ReactMapGL>
+            <CardContainer>
+              {_.map(InternList, intern => {
+                return <InternCard cardData={intern} key={intern.id} />;
+              })}
+            </CardContainer>
           </MapContainer>
-          <CardContainer>
-            {_.map(InternList, intern => {
-              return <InternCard cardData={intern} key={intern.id} />;
-            })}
-          </CardContainer>
         </PageContainer>
         <Footer />
       </>
@@ -71,9 +84,12 @@ class AboutPage extends Component {
 export default AboutPage;
 
 const CardContainer = styled.div`
-  columns: 3;
-  column-gap: 10px;
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  overflow: auto;
+  width: 40%;
+  margin-left: 10px;
 `;
 
 const Info = styled.h3`
@@ -87,6 +103,8 @@ const Info = styled.h3`
 
 const MapContainer = styled.div`
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 `;
 
 const PageContainer = styled.div`

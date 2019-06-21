@@ -30,10 +30,11 @@ const Overlay = styled.div`
   width: 100%;
   opacity: 0;
   transition: 0.33s ease;
-  background-color: #666062;
+  background-color: #666062b9;
 
   :hover {
     opacity: 1;
+    background-opacity: 0.8;
   }
 `;
 

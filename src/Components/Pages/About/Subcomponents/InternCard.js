@@ -16,10 +16,10 @@ export default InternCard;
 const CardContainer = styled.div`
   padding: 20px;
   border: 1px solid #eee;
-  border-left-width: 5px;
+  border-left-width: 7px;
   border-radius: 3px;
-  border-left-color: #007398;
-  width: 490px;
+  border-left-color: #3eb1c8;
+  width: auto;
   display: inline-block;
   vertical-align: top;
   margin-bottom: 10px;
