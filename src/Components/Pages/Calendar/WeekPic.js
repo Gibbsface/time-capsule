@@ -9,49 +9,50 @@ import Week8 from "../../../Images/Other/Church0.jpg";
 import Week9 from "../../../Images/Other/Church0.jpg";
 const Weeks = [
   {
-    src: Week1,
-    Height: 50,
-    Width: 50
+    src: Week1
+    // thumbnail: Week1,
+    // thumbnailheight: 300,
+    // thumbnailwidth: 300
   },
   {
-    src: Week2,
-    Height: 50,
-    Width: 50
+    src: Week2
+    // Height: 20,
+    // Width: 20
   },
   {
-    src: Week3,
-    Height: 50,
-    Width: 50
+    src: Week3
+    //Height: 20,
+    //Width: 20
   },
   {
-    src: Week4,
-    Height: 50,
-    Width: 50
+    src: Week4
+    //Height: 20,
+    //Width: 20
   },
   {
-    src: Week5,
-    Height: 50,
-    Width: 50
+    src: Week5
+    //Height: 20,
+    // Width: 20
   },
   {
-    src: Week6,
-    Height: 50,
-    Width: 50
+    src: Week6
+    //Height: 20,
+    //Width: 20
   },
   {
-    src: Week7,
-    Height: 50,
-    Width: 50
+    src: Week7
+    //Height: 20,
+    //Width: 20
   },
   {
-    src: Week8,
-    Height: 50,
-    Width: 50
+    src: Week8
+    //Height: 20,
+    //Width: 20
   },
   {
-    src: Week9,
-    Height: 50,
-    Width: 50
+    src: Week9
+    //Height: 20,
+    //Width: 20
   }
 ];
 export default Weeks;

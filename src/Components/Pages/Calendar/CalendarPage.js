@@ -7,6 +7,7 @@ import data from "./Dates.js";
 import _ from "lodash";
 import Layout from "./Layout.js";
 const Weeks = data;
+
 const Info = styled.h3`
   font-size: 20 px;
   opacity: 3;
@@ -40,8 +41,10 @@ export default class CalendarPage extends Component {
         <>
           <Record key={week.id}>
             <h1>{week.title}</h1>
-            <Columntext>{week.bio}</Columntext>
-            <Layout picture={week} key={week.id} />
+            <Columntext>
+              {week.bio}
+              <Layout picture={week} key={week.id} />
+            </Columntext>
           </Record>
         </>
       );
