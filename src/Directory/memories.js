@@ -56,8 +56,6 @@ import Valencia1 from "../Images/Outreach/CampusOutreach/ValenciaEast1.jpg";
 import Valencia2 from "../Images/Outreach/CampusOutreach/ValenciaEast2.jpg";
 import Valencia3 from "../Images/Outreach/CampusOutreach/ValenciaEast3.jpg";
 import Valencia4 from "../Images/Outreach/CampusOutreach/ValenciaEast4.jpg";
-import Valencia5 from "../Images/Outreach/CampusOutreach/ValenciaEast5.jpg";
-import Valencia6 from "../Images/Outreach/CampusOutreach/ValenciaEast6.jpg";
 
 import Cookout0 from "../Images/Fun/Cookout/Cookout0.jpg";
 import Cookout1 from "../Images/Fun/Cookout/Cookout1.jpg";
@@ -580,22 +578,6 @@ const CampusPhotos = [
   {
     src: Valencia4,
     thumbnail: Valencia4,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption: "test test test"
-  },
-  {
-    src: Valencia5,
-    thumbnail: Valencia5,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption: "test test test"
-  },
-  {
-    src: Valencia6,
-    thumbnail: Valencia6,
     thumbnailWidth: 320,
     thumbnailHeight: 174,
     isSelected: false,
