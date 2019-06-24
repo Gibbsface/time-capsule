@@ -49,20 +49,3 @@ class GalleryPage extends Component {
 }
 
 export default GalleryPage;
-
-// {_.map(Memories, Story => {
-//   return Story.photos != null ? (
-//     <section-container key={"gallery_" + Story.id}>
-//       <Titles key={"title_" + Story.id}>
-//         {"\n"} {Story.title} {"\n"}
-//       </Titles>
-//       <Gallery
-//         key={"images_" + Story.id}
-//         images={Story.photos}
-//         enableImageSelection={false}
-//         maxRows={1}
-//         backdropClosesModal={true}
-//       />
-//     </section-container>
-//   ) : null;
-// })}
