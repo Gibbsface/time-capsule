@@ -4,10 +4,11 @@ import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
 import data from "./Dates.js";
+import weekdata from "../../../Directory/memories.json";
 import _ from "lodash";
 import Layout from "./Layout.js";
-const Weeks = data;
-
+//const Weeks = data;
+const Weeks = weekdata.Memories;
 const Info = styled.h3`
   font-size: 20 px;
   opacity: 3;
@@ -24,6 +25,15 @@ const Record = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-top-style: double;
+  border-top-width: 20px;
+  border-bottom-style: double;
+  border-bottom-width: 20px;
+  border-right-style: double;
+  border-right-width: 10px;
+  border-left-style: double;
+  border-left-width: 10px;
+  border-color: #116891;
 `;
 const Columntext = styled.div`
   column-count: 2;
@@ -33,10 +43,7 @@ const Columntext = styled.div`
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
-    // _.map(WeekPic, pic => {
-    //   Array.push(<Layout picture={pic} key={pic.id} />);
-    // });
-    _.map(Weeks, week => {
+    /* _.map(Weeks, week => {
       Array.push(
         <>
           <Record key={week.id}>
@@ -45,6 +52,16 @@ export default class CalendarPage extends Component {
               {week.bio}
               <Layout picture={week} key={week.id} />
             </Columntext>
+          </Record>
+        </>
+      );
+    });*/
+    _.map(Weeks, time => {
+      Array.push(
+        <>
+          <Record key={time.week}>
+            <h1>Week {time.week}</h1>
+            <Columntext>{time.story}</Columntext>
           </Record>
         </>
       );

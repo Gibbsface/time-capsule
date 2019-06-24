@@ -99,6 +99,10 @@ const Info = styled.h3`
   background-color: orange;
   text-align: center;
   text-size: 20 px;
+  :after {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const MapContainer = styled.div`
