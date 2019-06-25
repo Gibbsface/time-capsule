@@ -17,7 +17,7 @@ export default class CalendarPage extends Component {
           <WeekTitle>Week {num}</WeekTitle>
           <WeekContent>
             {mems.map(m => {
-              return num == m.week ? (
+              return num === m.week ? (
                 <Story key={"text" + m.id}>
                   <h2>{m.title}</h2>
                   <p>{m.story}</p>
