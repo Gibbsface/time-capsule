@@ -8,6 +8,7 @@ import weekdata from "../../../Directory/memories.json";
 import _ from "lodash";
 import Layout from "./Layout.js";
 //const Weeks = data;
+const NumOfWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const Weeks = weekdata.Memories;
 const Info = styled.h3`
   font-size: 20 px;
@@ -56,12 +57,24 @@ export default class CalendarPage extends Component {
         </>
       );
     });*/
-    _.map(Weeks, time => {
+    _.map(NumOfWeeks, num => {
+      // Array.push(
+      //   <>
+      //     <Record key={time.week}>
+      //       <h1>Week {time.week}</h1>
+      //       <Columntext>{time.story}</Columntext>
+      //     </Record>
+      //   </>
+      // );
       Array.push(
         <>
-          <Record key={time.week}>
-            <h1>Week {time.week}</h1>
-            <Columntext>{time.story}</Columntext>
+          <Record>
+            <h1>Week {num}</h1>
+            {_.map(Weeks, time => {
+              return num === time.week ? (
+                <Columntext>{time.story}</Columntext>
+              ) : null;
+            })}
           </Record>
         </>
       );
