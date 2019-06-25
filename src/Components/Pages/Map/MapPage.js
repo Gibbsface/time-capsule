@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "@emotion/styled";
 
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Popup, Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import MAP_STYLE from "../../../config/map_config.json";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -14,6 +14,7 @@ import Memories from "../../../Directory/memories.js";
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import MemoryCard from "./Subcomponents/MemoryCard";
+import MemoryPopup from "./Subcomponents/MemoryPopup";
 
 class MapPage extends Component {
   state = {
@@ -23,10 +24,12 @@ class MapPage extends Component {
       latitude: 28.3921,
       longitude: -81.2825,
       zoom: 8
-    }
+    },
+    showPopup: true
   };
 
   render() {
+    const { showPopup } = this.state;
     return (
       <>
         <Navbar />
@@ -39,22 +42,9 @@ class MapPage extends Component {
               onViewportChange={viewport => this.setState({ viewport })}
             >
               {Memories.map(memory => {
-                return (
-                  <Marker
-                    key={memory.id}
-                    latitude={memory.latitude}
-                    longitude={memory.longitude}
-                  >
-                    <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  </Marker>
-                );
+                return <MemoryPopup data={memory} key={memory.id} />;
               })}
             </ReactMapGL>
-            <CardContainer>
-              {Memories.map(memory => {
-                return <MemoryCard cardData={memory} key={memory.id} />;
-              })}
-            </CardContainer>
           </MapContainer>
         </PageContainer>
         <Footer />
