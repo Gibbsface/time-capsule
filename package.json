@@ -24,7 +24,7 @@
     "react-swipeable-views": "^0.13.3",
     "react-title-component": "^1.0.1",
     "reactstrap": "^8.0.0",
-    "video-react": "^0.13.9"
+    "video-react": "^0.14.0"
   },
   "scripts": {
     "start": "react-scripts start",

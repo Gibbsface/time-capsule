@@ -45,8 +45,8 @@ const Button = styled(Link)`
   border-color: orange;
   cursor: pointer;
   color: #666062;
-  font-size: 15px;
-  padding: 20px;
+  font-size: 25px;
+  padding: 15px;
   text-decoration: none;
   :hover {
     color: #f9b625;

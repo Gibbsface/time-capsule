@@ -29,7 +29,7 @@ class GalleryPage extends Component {
       <>
         <Navbar />
         <PageContainer>
-          {_.map(Memories, s => {
+          {Memories.map(s => {
             return s.photos != null ? (
               <Lightbox
                 key={"Lightbox" + s.id}
