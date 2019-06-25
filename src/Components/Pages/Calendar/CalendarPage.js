@@ -3,10 +3,13 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import data from "./dates.json";
+import data from "./Dates.js";
+import weekdata from "../../../Directory/memories.json";
 import _ from "lodash";
-
-const Weeks = data.Dates;
+import Layout from "./Layout.js";
+//const Weeks = data;
+const NumOfWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const Weeks = weekdata.Memories;
 const Info = styled.h3`
   font-size: 20 px;
   opacity: 3;
@@ -16,10 +19,22 @@ const Info = styled.h3`
   text-size: 20 px;
 `;
 const Record = styled.div`
-  padding: 15;
   width: 100%;
-  height: 300px;
-  background-color: tan;
+  height: 600px;
+  background-color: cyan;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top-style: double;
+  border-top-width: 20px;
+  border-bottom-style: double;
+  border-bottom-width: 20px;
+  border-right-style: double;
+  border-right-width: 10px;
+  border-left-style: double;
+  border-left-width: 10px;
+  border-color: #116891;
 `;
 const Columntext = styled.div`
   column-count: 2;
@@ -29,12 +44,39 @@ const Columntext = styled.div`
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
-    _.map(Weeks, week => {
+    /* _.map(Weeks, week => {
       Array.push(
-        <Record key={week.id}>
-          <h1>{week.title}</h1>
-          <Columntext>{week.bio}</Columntext>
-        </Record>
+        <>
+          <Record key={week.id}>
+            <h1>{week.title}</h1>
+            <Columntext>
+              {week.bio}
+              <Layout picture={week} key={week.id} />
+            </Columntext>
+          </Record>
+        </>
+      );
+    });*/
+    _.map(NumOfWeeks, num => {
+      // Array.push(
+      //   <>
+      //     <Record key={time.week}>
+      //       <h1>Week {time.week}</h1>
+      //       <Columntext>{time.story}</Columntext>
+      //     </Record>
+      //   </>
+      // );
+      Array.push(
+        <>
+          <Record>
+            <h1>Week {num}</h1>
+            {_.map(Weeks, time => {
+              return num === time.week ? (
+                <Columntext>{time.story}</Columntext>
+              ) : null;
+            })}
+          </Record>
+        </>
       );
     });
     return Array;

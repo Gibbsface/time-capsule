@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import Memories from "../../../Directory/memories.js";
 import Lightbox from "./Lightbox.js";
 import _ from "lodash";
+import VideoPlayer from "./Videos";
 
 const PageContainer = styled.div`
   margin-right: 7%;
@@ -38,6 +39,9 @@ class GalleryPage extends Component {
             ) : null;
           })}
         </PageContainer>
+        <VideoContainer>
+          <VideoPlayer />
+        </VideoContainer>
         <Footer />
       </>
     );
@@ -45,20 +49,3 @@ class GalleryPage extends Component {
 }
 
 export default GalleryPage;
-
-// {_.map(Memories, Story => {
-//   return Story.photos != null ? (
-//     <section-container key={"gallery_" + Story.id}>
-//       <Titles key={"title_" + Story.id}>
-//         {"\n"} {Story.title} {"\n"}
-//       </Titles>
-//       <Gallery
-//         key={"images_" + Story.id}
-//         images={Story.photos}
-//         enableImageSelection={false}
-//         maxRows={1}
-//         backdropClosesModal={true}
-//       />
-//     </section-container>
-//   ) : null;
-// })}

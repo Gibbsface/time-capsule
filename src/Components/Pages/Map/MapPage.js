@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import styled from "@emotion/styled";
-import _ from "lodash";
 
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import MAP_STYLE from "../../../config/map_config.json";
 import "mapbox-gl/dist/mapbox-gl.css";
+
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Memories from "../../../Directory/memories.js";
 
@@ -35,9 +37,21 @@ class MapPage extends Component {
               mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
               {...this.state.viewport}
               onViewportChange={viewport => this.setState({ viewport })}
-            />
+            >
+              {Memories.map(memory => {
+                return (
+                  <Marker
+                    key={memory.id}
+                    latitude={memory.latitude}
+                    longitude={memory.longitude}
+                  >
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  </Marker>
+                );
+              })}
+            </ReactMapGL>
             <CardContainer>
-              {_.map(Memories, memory => {
+              {Memories.map(memory => {
                 return <MemoryCard cardData={memory} key={memory.id} />;
               })}
             </CardContainer>

@@ -5,7 +5,7 @@ import "react-image-lightbox/style.css";
 
 const AlbumContainer = styled.div`
   position: relative;
-  width: 450px;
+  width: 400px;
   height: 300px;
   margin: 10px 10px;
 
@@ -16,8 +16,8 @@ const AlbumContainer = styled.div`
 
 const ImageInput = styled.input`
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 `;
 
 const Overlay = styled.div`
