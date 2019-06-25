@@ -1,12 +1,12 @@
-import Week1 from "../../../Images/Other/Church0.jpg";
-import Week2 from "../../../Images/Office/JesusTour0.jpg";
-import Week3 from "../../../Images/Office/JesusTour1.jpg";
-import Week4 from "../../../Images/Fun/Cookout/Cookout0.jpg";
-import Week5 from "../../../Images/Other/Church0.jpg";
-import Week6 from "../../../Images/Other/Church0.jpg";
-import Week7 from "../../../Images/Other/Church0.jpg";
-import Week8 from "../../../Images/Other/Church0.jpg";
-import Week9 from "../../../Images/Other/Church0.jpg";
+import Week1 from "../../../Images/Landing.jpg";
+import Week2 from "../../../Images/Landing.jpg";
+import Week3 from "../../../Images/Landing.jpg";
+import Week4 from "../../../Images/Landing.jpg";
+import Week5 from "../../../Images/Landing.jpg";
+import Week6 from "../../../Images/Landing.jpg";
+import Week7 from "../../../Images/Landing.jpg";
+import Week8 from "../../../Images/Landing.jpg";
+import Week9 from "../../../Images/Landing.jpg";
 const Weeks = [
   {
     src: Week1
