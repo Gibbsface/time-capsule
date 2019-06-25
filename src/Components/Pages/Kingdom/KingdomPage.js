@@ -4,7 +4,6 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import Memories from "../../../Directory/memories.js";
 import LandingImage from "../../../Images/Outreach/CocoaBeach/Beach10.jpg";
-import _ from "lodash";
 
 export default class KingdomPage extends Component {
   render() {
@@ -18,7 +17,7 @@ export default class KingdomPage extends Component {
           </Overlay>
         </AlbumContainer>
         <PostContainer className='c-posts'>
-          {_.map(Memories, Story => {
+          {Memories.map(Story => {
             return Story.tags.includes("Outreach") ? (
               <Post key={Story.id}>
                 <h2>{Story.title}</h2>
@@ -46,7 +45,8 @@ const AlbumContainer = styled.div`
   position: relative;
   width: 86%;
   height: 250px;
-  margin: 5px 7%;
+  margin: 0 7%;
+  margin-bottom: 5px;
 `;
 
 const ImageInput = styled.img`
