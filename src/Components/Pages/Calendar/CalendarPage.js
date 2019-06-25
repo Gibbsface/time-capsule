@@ -3,19 +3,19 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import weekdata from "../../../Directory/memories.json";
+import data from "../../../Directory/memories.json";
 
 const NumOfWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const mems = weekdata.Memories;
+const mems = data.Memories;
 
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
     NumOfWeeks.map(num => {
       Array.push(
-        <WeekDiv key={"week" + num}>
+        <WeekContainer key={"week" + num}>
           <WeekTitle>Week {num}</WeekTitle>
-          <WeekContainer>
+          <WeekContent>
             {mems.map(m => {
               return num == m.week ? (
                 <Story key={"text" + m.id}>
@@ -24,8 +24,8 @@ export default class CalendarPage extends Component {
                 </Story>
               ) : null;
             })}
-          </WeekContainer>
-        </WeekDiv>
+          </WeekContent>
+        </WeekContainer>
       );
       return null;
     });
@@ -52,7 +52,7 @@ const WeekTitle = styled.div`
   font-size: 30px;
 `;
 
-const WeekContainer = styled.div`
+const WeekContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: top;
@@ -122,9 +122,10 @@ const Info = styled.div`
   font-style: italic;
 `;
 
-const WeekDiv = styled.div`
+const WeekContainer = styled.div`
   width: 100% - 10px;
   padding-bottom: 3em;
+  margin: 2%;
   margin-top: 1em;
   align-items: center;
   justify-content: center;
