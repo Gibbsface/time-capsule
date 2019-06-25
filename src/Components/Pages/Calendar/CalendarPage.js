@@ -3,7 +3,7 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import data from "./Dates.js";
+import photo from "../../../Directory/memories.js";
 import weekdata from "../../../Directory/memories.json";
 import _ from "lodash";
 import Layout from "./Layout.js";
@@ -58,14 +58,6 @@ export default class CalendarPage extends Component {
       );
     });*/
     _.map(NumOfWeeks, num => {
-      // Array.push(
-      //   <>
-      //     <Record key={time.week}>
-      //       <h1>Week {time.week}</h1>
-      //       <Columntext>{time.story}</Columntext>
-      //     </Record>
-      //   </>
-      // );
       Array.push(
         <>
           <Record>
