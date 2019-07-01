@@ -18,7 +18,8 @@ const CardContainer = styled.div`
   border-left-width: 7px;
   border-radius: 3px;
   border-left-color: #3eb1c8;
-  width: auto;
+  height: auto;
+  width: 375px;
   display: inline-block;
   vertical-align: top;
   margin-bottom: 10px;

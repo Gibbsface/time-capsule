@@ -11,15 +11,17 @@ export default class MemoryPopup extends Component {
   constructor(props) {
     super(props);
     this.state = { isShowing: false };
+
+    this.show = this.show.bind(this);
   }
 
-  onClick() {
+  show() {
     this.setState({ isShowing: true });
   }
 
   render() {
     return (
-      <div>
+      <div onClick={this.show}>
         <Marker
           key={this.props.data.id}
           latitude={this.props.data.latitude}

@@ -24,8 +24,7 @@ class MapPage extends Component {
       latitude: 28.3921,
       longitude: -81.2825,
       zoom: 8
-    },
-    showPopup: true
+    }
   };
 
   render() {
