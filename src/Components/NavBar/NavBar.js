@@ -11,7 +11,7 @@ const NavbarContainer = styled.div`
   padding-right: 7%;
   padding-left: 7%;
   width: 86%;
-  height: 150px;
+  height: 125px;
   display: flex;
   flex-direction: column;
   border-bottom: solid #f9b625;
@@ -32,21 +32,15 @@ const LogoContainer = styled(Link)`
 const LinkContainer = styled.div`
   background-color: transparent;
   display: flex;
-  height: 80;
   justify-content: space-between;
-  border-top-style: solid;
-  border-width: 150%;
-  border-color: orange;
 `;
 const Button = styled(Link)`
   background-color: transparent;
   border: 0px;
-  border-right-style: solid;
-  border-color: orange;
   cursor: pointer;
   color: #666062;
-  font-size: 15px;
-  padding: 20px;
+  font-size: 25px;
+  padding: 15px;
   text-decoration: none;
   :hover {
     color: #f9b625;
