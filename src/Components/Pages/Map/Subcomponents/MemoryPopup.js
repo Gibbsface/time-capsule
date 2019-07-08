@@ -21,6 +21,7 @@ const MemoryPopup = props => {
           key={props.data.id}
           latitude={props.data.latitude}
           longitude={props.data.longitude}
+          offsetLeft={-5}
           captureClick={true}
         >
           <FontAwesomeIcon icon={faMapMarkerAlt} />

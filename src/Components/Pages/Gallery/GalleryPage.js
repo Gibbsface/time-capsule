@@ -4,7 +4,6 @@ import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Memories from "../../../Directory/memories.js";
 import Lightbox from "./Lightbox.js";
-import _ from "lodash";
 import VideoPlayer from "./Videos";
 
 const VideoContainer = styled.div``;

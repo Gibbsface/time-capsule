@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import styled from "@emotion/styled";
 
-import ReactMapGL, { Popup, Marker } from "react-map-gl";
+import ReactMapGL from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import MAP_STYLE from "../../../config/map_config.json";
 import "mapbox-gl/dist/mapbox-gl.css";
-
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Memories from "../../../Directory/memories.js";
 
@@ -19,7 +16,7 @@ class MapPage extends Component {
   state = {
     viewport: {
       width: "100%",
-      height: "675px",
+      height: "670px",
       latitude: 28.3921,
       longitude: -81.2825,
       zoom: 8
@@ -66,7 +63,7 @@ const PageContainer = styled.div`
 `;
 
 const MapContainer = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
 `;

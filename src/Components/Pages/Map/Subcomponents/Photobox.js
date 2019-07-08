@@ -13,7 +13,7 @@ export default class Photobox extends Component {
   }
 
   render() {
-    const { photoIndex, isOpen } = this.state;
+    const { photoIndex } = this.state;
     const { isLightBoxOpen, changeLightBoxOpen } = this.props;
 
     return (
