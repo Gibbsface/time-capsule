@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Photobox from "./Photobox";
 
-const MemoryCard = ({ cardData }) => {
+const MemoryCard = ({ cardData, isLightBoxOpen, changeLightBoxOpen }) => {
   return (
     <CardContainer>
       <Title>{cardData.title}</Title>
       <Story>{cardData.story}</Story>
+      <Photobox
+        isLightBoxOpen={isLightBoxOpen}
+        changeLightBoxOpen={changeLightBoxOpen}
+        key={"Photobox" + cardData.id}
+        photos={cardData.photos}
+      />
     </CardContainer>
   );
 };

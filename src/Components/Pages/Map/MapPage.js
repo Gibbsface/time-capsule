@@ -13,14 +13,13 @@ import Memories from "../../../Directory/memories.js";
 
 import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
-import MemoryCard from "./Subcomponents/MemoryCard";
 import MemoryPopup from "./Subcomponents/MemoryPopup";
 
 class MapPage extends Component {
   state = {
     viewport: {
       width: "100%",
-      height: 700,
+      height: "675px",
       latitude: 28.3921,
       longitude: -81.2825,
       zoom: 8
@@ -28,7 +27,6 @@ class MapPage extends Component {
   };
 
   render() {
-    const { showPopup } = this.state;
     return (
       <>
         <Navbar />
@@ -71,13 +69,4 @@ const MapContainer = styled.div`
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
-`;
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 700px;
-  overflow: auto;
-  width: 40%;
-  margin-left: 10px;
 `;
