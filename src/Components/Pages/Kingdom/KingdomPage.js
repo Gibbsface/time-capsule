@@ -11,7 +11,7 @@ export default class KingdomPage extends Component {
       <>
         <Navbar />
         <AlbumContainer>
-          <ImageInput src={LandingImage} />
+          <Image src={LandingImage} />
           <Overlay>
             <OverText>Here's How God Showed Up</OverText>
           </Overlay>
@@ -49,7 +49,7 @@ const AlbumContainer = styled.div`
   margin-bottom: 5px;
 `;
 
-const ImageInput = styled.img`
+const Image = styled.img`
   display: block;
   width: 100%;
   height: 100%;
