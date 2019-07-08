@@ -4,11 +4,12 @@ import Footer from "../../Footer/Footer";
 import ReactMapGL, { Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
-import LocationPin from "./Locations/LocationPins";
 import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-import InternList from "../../../Directory/Interns/interns.js";
+import { Interns } from "../../../Directory/Interns/interns.json";
 import InternCard from "../About/Subcomponents/InternCard.js";
 
 // These are the supporting styled tags
@@ -24,16 +25,7 @@ class AboutPage extends Component {
     },
     popupInfo: null
   };
-  _renderLocationMarker = data => {
-    return (
-      <Marker key={data.id} longitude={data.longitude} latitude={data.latitude}>
-        <LocationPin
-          size={20}
-          onClick={() => this.setState({ popupInfo: data })}
-        />
-      </Marker>
-    );
-  };
+
   render() {
     return (
       <>
@@ -53,15 +45,17 @@ class AboutPage extends Component {
               onViewportChange={viewport => this.setState({ viewport })}
               scrollZoom={false}
             >
-              {InternList.map(pin => {
+              {Interns.map(pin => {
                 if (pin.latitude && pin.latitude) {
                   return (
                     <Marker
                       key={pin.id}
                       latitude={pin.latitude}
                       longitude={pin.longitude}
+                      offsetTop={-16}
+                      offsetLeft={-6}
                     >
-                      <LocationPin size={20} />
+                      <FontAwesomeIcon icon={faMapMarkerAlt} />
                     </Marker>
                   );
                 } else {
@@ -70,7 +64,7 @@ class AboutPage extends Component {
               })}
             </ReactMapGL>
             <CardContainer>
-              {InternList.map(intern => {
+              {Interns.map(intern => {
                 return <InternCard cardData={intern} key={intern.id} />;
               })}
             </CardContainer>

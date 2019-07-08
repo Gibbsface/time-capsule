@@ -5,7 +5,6 @@ const InternCard = ({ cardData }) => {
   return (
     <CardContainer>
       <Name>{cardData.name}</Name>
-      <TextWrap src={cardData.photo} width='150' height='200' />
       <Bio>{cardData.bio}</Bio>
     </CardContainer>
   );
@@ -29,12 +28,6 @@ const Name = styled.p`
   font-size: 24px;
   margin: 5px 0px;
   color: #333333;
-`;
-
-const TextWrap = styled.img`
-  float: left;
-  margin-top: 5px;
-  margin-right: 7px;
 `;
 
 const Bio = styled.p`
