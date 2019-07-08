@@ -46,7 +46,7 @@ class AboutPage extends Component {
               scrollZoom={false}
             >
               {Interns.map(pin => {
-                if (pin.latitude && pin.latitude) {
+                if (pin.latitude && pin.longitude) {
                   return (
                     <Marker
                       key={pin.id}
