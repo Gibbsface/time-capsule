@@ -56,8 +56,6 @@ import Valencia1 from "../Images/Outreach/CampusOutreach/ValenciaEast1.jpg";
 import Valencia2 from "../Images/Outreach/CampusOutreach/ValenciaEast2.jpg";
 import Valencia3 from "../Images/Outreach/CampusOutreach/ValenciaEast3.jpg";
 import Valencia4 from "../Images/Outreach/CampusOutreach/ValenciaEast4.jpg";
-import Valencia5 from "../Images/Outreach/CampusOutreach/ValenciaEast5.jpg";
-import Valencia6 from "../Images/Outreach/CampusOutreach/ValenciaEast6.jpg";
 
 import Cookout0 from "../Images/Fun/Cookout/Cookout0.jpg";
 import Cookout1 from "../Images/Fun/Cookout/Cookout1.jpg";
@@ -97,9 +95,7 @@ import Prayer4 from "../Images/Office/Prayer4.jpg";
 import Prayer5 from "../Images/Office/Prayer5.jpg";
 import Office0 from "../Images/Office/Office0.jpg";
 import Office1 from "../Images/Office/Office1.jpg";
-import Office2 from "../Images/Office/Office2.jpg";
 import Office3 from "../Images/Office/Office3.jpg";
-//import Office4 from "../Images/Office/Office4.jpg";
 import Office5 from "../Images/Office/Office5.jpg";
 import Office6 from "../Images/Office/Office6.jpg";
 import Office7 from "../Images/Office/Office7.jpg";
@@ -120,7 +116,6 @@ import Office21 from "../Images/Office/Office21.jpg";
 import Office22 from "../Images/Office/Office22.jpg";
 import Office23 from "../Images/Office/Office23.jpg";
 import Office24 from "../Images/Office/Office24.jpg";
-import Office25 from "../Images/Office/Office25.jpg";
 import Office26 from "../Images/Office/Office26.jpg";
 import Office27 from "../Images/Office/Office27.jpg";
 import Office28 from "../Images/Office/Office28.jpg";
@@ -153,8 +148,6 @@ import Golf24 from "../Images/Fun/MiniGolf/Golf24.jpg";
 import Golf25 from "../Images/Fun/MiniGolf/Golf25.jpg";
 import Golf26 from "../Images/Fun/MiniGolf/Golf26.jpg";
 import Golf27 from "../Images/Fun/MiniGolf/Golf27.jpg";
-import Golf28 from "../Images/Fun/MiniGolf/Golf28.jpg";
-import Golf29 from "../Images/Fun/MiniGolf/Golf29.jpg";
 
 const Memories = data.Memories;
 
@@ -589,22 +582,6 @@ const CampusPhotos = [
     thumbnailHeight: 174,
     isSelected: false,
     caption: "test test test"
-  },
-  {
-    src: Valencia5,
-    thumbnail: Valencia5,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption: "test test test"
-  },
-  {
-    src: Valencia6,
-    thumbnail: Valencia6,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: false,
-    caption: "test test test"
   }
 ];
 const CookoutPhotos = [
@@ -874,13 +851,6 @@ const OfficePhotos = [
     caption: "test test test"
   },
   {
-    src: Office2,
-    thumbnail: Office2,
-    thumbnailWidth: 100,
-    thumbnailHeight: 100,
-    caption: "test test test"
-  },
-  {
     src: Office3,
     thumbnail: Office3,
     thumbnailWidth: 100,
@@ -1023,13 +993,6 @@ const OfficePhotos = [
   {
     src: Office24,
     thumbnail: Office24,
-    thumbnailWidth: 100,
-    thumbnailHeight: 100,
-    caption: "test test test"
-  },
-  {
-    src: Office25,
-    thumbnail: Office25,
     thumbnailWidth: 100,
     thumbnailHeight: 100,
     caption: "test test test"
@@ -1249,20 +1212,6 @@ const MiniGolfPhotos = [
   {
     src: Golf27,
     thumbnail: Golf27,
-    thumbnailWidth: 100,
-    thumbnailHeight: 100,
-    caption: "test test test"
-  },
-  {
-    src: Golf28,
-    thumbnail: Golf28,
-    thumbnailWidth: 100,
-    thumbnailHeight: 100,
-    caption: "test test test"
-  },
-  {
-    src: Golf29,
-    thumbnail: Golf29,
     thumbnailWidth: 100,
     thumbnailHeight: 100,
     caption: "test test test"

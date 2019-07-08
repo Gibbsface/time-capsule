@@ -4,10 +4,9 @@ import Footer from "../../Footer/Footer";
 import ReactMapGL, { Marker } from "react-map-gl";
 import TOKEN from "../../../config/tokens.json";
 import "mapbox-gl/dist/mapbox-gl.css";
-import LocationPin from "../../Locations/LocationPins";
+import LocationPin from "./Locations/LocationPins";
 import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
-import _ from "lodash";
 
 import InternList from "../../../Directory/Interns/interns.js";
 import InternCard from "../About/Subcomponents/InternCard.js";
@@ -54,7 +53,7 @@ class AboutPage extends Component {
               onViewportChange={viewport => this.setState({ viewport })}
               scrollZoom={false}
             >
-              {_.map(InternList, pin => {
+              {InternList.map(pin => {
                 if (pin.latitude && pin.latitude) {
                   return (
                     <Marker
@@ -65,11 +64,13 @@ class AboutPage extends Component {
                       <LocationPin size={20} />
                     </Marker>
                   );
+                } else {
+                  return null;
                 }
               })}
             </ReactMapGL>
             <CardContainer>
-              {_.map(InternList, intern => {
+              {InternList.map(intern => {
                 return <InternCard cardData={intern} key={intern.id} />;
               })}
             </CardContainer>
@@ -98,6 +99,10 @@ const Info = styled.h3`
   background-color: orange;
   text-align: center;
   text-size: 20 px;
+  :after {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const MapContainer = styled.div`

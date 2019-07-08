@@ -3,39 +3,31 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import data from "./dates.json";
-import _ from "lodash";
+import data from "../../../Directory/memories.json";
 
-const Weeks = data.Dates;
-const Info = styled.h3`
-  font-size: 20 px;
-  opacity: 3;
-  width: 100%;
-  background-color: orange;
-  text-align: center;
-  text-size: 20 px;
-`;
-const Record = styled.div`
-  padding: 15;
-  width: 100%;
-  height: 300px;
-  background-color: tan;
-`;
-const Columntext = styled.div`
-  column-count: 2;
-  column-gap: 40px;
-  column-rule-style: solid;
-`;
+const NumOfWeeks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const mems = data.Memories;
+
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
-    _.map(Weeks, week => {
+    NumOfWeeks.map(num => {
       Array.push(
-        <Record key={week.id}>
-          <h1>{week.title}</h1>
-          <Columntext>{week.bio}</Columntext>
-        </Record>
+        <WeekContainer key={"week" + num}>
+          <WeekTitle>Week {num}</WeekTitle>
+          <WeekContent>
+            {mems.map(m => {
+              return num === m.week ? (
+                <Story key={"text" + m.id}>
+                  <h2>{m.title}</h2>
+                  <p>{m.story}</p>
+                </Story>
+              ) : null;
+            })}
+          </WeekContent>
+        </WeekContainer>
       );
+      return null;
     });
     return Array;
   };
@@ -43,13 +35,100 @@ export default class CalendarPage extends Component {
     return (
       <>
         <Navbar />
-        <Info>
-          In this page, you will keep track of all the events and outreaches
-          that happened with our 2019 summer intern team.
-        </Info>
-        <Swipe enableMouseEvents>{this.createTable()}</Swipe>
+        <Info>Swipe Left and Right to see the different weeks</Info>
+        <Scrapbook>
+          <Swipe enableMouseEvents>{this.createTable()}</Swipe>
+        </Scrapbook>
         <Footer />
       </>
     );
   }
 }
+
+const WeekTitle = styled.div`
+  color: #666062;
+  margin: 0;
+  padding: 1em 0;
+  font-size: 30px;
+`;
+
+const WeekContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  margin-left: 7%;
+  margin-right: 7%;
+  width: 86%;
+`;
+
+const Story = styled.div`
+  background-color: white;
+  padding-left: 5px;
+  border-left: solid #3eb1c8 3px;
+  margin: 5px;
+  transition: 0.25s ease;
+  :hover {
+    border-left: solid #3eb1c8 8px;
+    margin-left: 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  :first-of-type {
+    flex-grow: 2;
+  }
+
+  @media all and (min-width: 600px) {
+    flex-basis: 50%;
+    padding-right: 10px;
+    :first-of-type {
+      flex-basis: 100%;
+    }
+  }
+
+  @media all and (min-width: 1000px) {
+    flex-basis: 33%;
+    :first-of-type {
+      flex-basis: 66%;
+    }
+  }
+
+  @media all and (min-width: 1200px) {
+    flex-basis: 25%;
+    :first-of-type {
+      flex-basis: 50%;
+    }
+  }
+`;
+
+const Scrapbook = styled.div`
+  width: 86%;
+  margin: 0 7%;
+  overflow: hidden;
+`;
+
+const Info = styled.div`
+  font-size: 20 px;
+  margin: 0 7%;
+  margin-top: 1em;
+  width: 86%;
+
+  color: white;
+  text-align: center;
+  font-style: italic;
+`;
+
+const WeekContainer = styled.div`
+  width: 100% - 10px;
+  padding-bottom: 3em;
+  margin: 2%;
+  margin-top: 1em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f9b6259a;
+`;

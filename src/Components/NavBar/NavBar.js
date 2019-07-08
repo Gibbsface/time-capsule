@@ -29,20 +29,18 @@ const LogoContainer = styled(Link)`
   background-size: cover;
   background-repeat: no-repeat;
 `;
-
 const LinkContainer = styled.div`
   background-color: transparent;
   display: flex;
   justify-content: space-between;
 `;
-
 const Button = styled(Link)`
   background-color: transparent;
   border: 0px;
   cursor: pointer;
   color: #666062;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 25px;
+  padding: 15px;
   text-decoration: none;
   :hover {
     color: #f9b625;
