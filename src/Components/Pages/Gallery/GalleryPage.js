@@ -4,9 +4,6 @@ import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Memories from "../../../Directory/memories.js";
 import Lightbox from "./Lightbox.js";
-import VideoPlayer from "./Videos";
-
-const VideoContainer = styled.div``;
 
 class GalleryPage extends Component {
   render() {
@@ -24,9 +21,6 @@ class GalleryPage extends Component {
             ) : null;
           })}
         </PageContainer>
-        <VideoContainer>
-          <VideoPlayer />
-        </VideoContainer>
         <Footer />
       </>
     );
