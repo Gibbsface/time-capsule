@@ -6,9 +6,27 @@ import Ig from "../../Images/ig_logo.png";
 
 const curryear = new Date().getFullYear();
 
+const Footer = () => {
+  return (
+    <FooterContainer>
+      <Bar />
+      <Copyright>
+        <Text>© {curryear} Cru. All Rights Reserved.</Text>
+        <SocialContainer>
+          <FbLogo />
+          <InstaLogo />
+        </SocialContainer>
+      </Copyright>
+    </FooterContainer>
+  );
+};
+
+export default Footer;
+
 const FooterContainer = styled.div`
   background-color: #666062;
   height: 60px;
+  width: 100%;
 `;
 
 const Bar = styled.hr`
@@ -72,20 +90,3 @@ const InstaLogo = styled.div`
   border-radius: 9999px;
   border-width: 2px;
 `;
-
-const Footer = () => {
-  return (
-    <FooterContainer>
-      <Bar />
-      <Copyright>
-        <Text>© {curryear} Cru. All Rights Reserved.</Text>
-        <SocialContainer>
-          <FbLogo />
-          <InstaLogo />
-        </SocialContainer>
-      </Copyright>
-    </FooterContainer>
-  );
-};
-
-export default Footer;
