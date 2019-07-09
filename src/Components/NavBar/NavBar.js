@@ -11,7 +11,7 @@ const NavbarContainer = styled.div`
   padding-right: 7%;
   padding-left: 7%;
   width: 86%;
-  height: 125px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   border-bottom: solid #f9b625;
@@ -28,10 +28,18 @@ const LogoContainer = styled(Link)`
   background-origin: content-box;
   background-size: cover;
   background-repeat: no-repeat;
+  @media all and (min-width: 400px) {
+    width: 140px;
+    height: 160px;
+  }
+  @media all and (min-width: 300px) {
+    width: 150px;
+  }
 `;
 const LinkContainer = styled.div`
   background-color: transparent;
   display: flex;
+  height: 80;
   justify-content: space-between;
 `;
 const Button = styled(Link)`
@@ -40,10 +48,18 @@ const Button = styled(Link)`
   cursor: pointer;
   color: #666062;
   font-size: 25px;
-  padding: 15px;
+  padding: 20px;
   text-decoration: none;
   :hover {
     color: #f9b625;
+  }
+  @media all and (min-width: 300px) {
+    font-size: 15px;
+    padding: 5px;
+  }
+  @media all and (min-width: 700px) {
+    font-size: 30px;
+    padding: 15px;
   }
 `;
 

@@ -9,7 +9,6 @@ import LOCATIONS from "../../Locations/locations.json";
 import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
 import _ from "lodash";
-
 import InternList from "../../../Directory/Interns/interns.js";
 import InternCard from "../About/Subcomponents/InternCard.js";
 
@@ -93,15 +92,18 @@ const CardContainer = styled.div`
 `;
 
 const Info = styled.h3`
-  font-size: 20 px;
+  font-size: 20px;
   opacity: 3;
   width: 100%;
   background-color: orange;
   text-align: center;
-  text-size: 20 px;
+  text-size: 20px;
   :after {
     display: flex;
     justify-content: center;
+  }
+  @media all and (min-width: 300px) {
+    font-size: 15px;
   }
 `;
 
@@ -119,7 +121,6 @@ const PageContainer = styled.div`
   padding-left: 7%;
   width: 86%;
   padding-top: 15px;
-
   display: flex;
   flex-direction: column;
 `;

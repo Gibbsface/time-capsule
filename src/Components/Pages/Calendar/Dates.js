@@ -3,8 +3,7 @@ const Dates = [
   {
     id: 1,
     title: "Week 1",
-    bio:
-      "This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing ",
+    bio: "This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing This is for week 1. Testing Testing Testing Testing ",
     photos: WeekPic[0]
   },
   {

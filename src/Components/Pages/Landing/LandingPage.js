@@ -24,6 +24,9 @@ const HomePage = styled.div`
   justify-content: 100px;
 
   height: 600px;
+  @media all and (min-width: 1000px) {
+    height: 1000px;
+  }
 `;
 
 const Welcome = styled.div`

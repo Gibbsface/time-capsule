@@ -3,7 +3,6 @@ import Navbar from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import styled from "@emotion/styled";
 import Swipe from "react-swipeable-views";
-import data from "./Dates.js";
 import weekdata from "../../../Directory/memories.json";
 import _ from "lodash";
 import Layout from "./Layout.js";
@@ -17,6 +16,15 @@ const Info = styled.h3`
   background-color: orange;
   text-align: center;
   text-size: 20 px;
+  @media all and (min-width: 1000px) {
+    font-size: 30px;
+  }
+  @media all and (min-width: 700px) {
+    font-size: 25px;
+  }
+  @media all and (min-width: 300px) {
+    font-size: 15px;
+  }
 `;
 const Record = styled.div`
   width: 100%;
@@ -31,10 +39,18 @@ const Record = styled.div`
   border-bottom-style: double;
   border-bottom-width: 20px;
   border-right-style: double;
-  border-right-width: 10px;
-  border-left-style: double;
-  border-left-width: 10px;
-  border-color: #116891;
+  @media all and (min-width: 300px) {
+    height: 100%;
+    font-size: 20px;
+  }
+  @media all and (min-width: 700px) {
+    height: 100%;
+    font-size: 30px;
+  }
+  @media all and (min-width: 1000px) {
+    height: 100%;
+    font-size: 40px;
+  }
 `;
 const Columntext = styled.div`
   column-count: 2;
@@ -44,28 +60,8 @@ const Columntext = styled.div`
 export default class CalendarPage extends Component {
   createTable = () => {
     let Array = [];
-    /* _.map(Weeks, week => {
-      Array.push(
-        <>
-          <Record key={week.id}>
-            <h1>{week.title}</h1>
-            <Columntext>
-              {week.bio}
-              <Layout picture={week} key={week.id} />
-            </Columntext>
-          </Record>
-        </>
-      );
-    });*/
+    //    <Layout picture={week} key={week.id} />
     _.map(NumOfWeeks, num => {
-      // Array.push(
-      //   <>
-      //     <Record key={time.week}>
-      //       <h1>Week {time.week}</h1>
-      //       <Columntext>{time.story}</Columntext>
-      //     </Record>
-      //   </>
-      // );
       Array.push(
         <>
           <Record>
