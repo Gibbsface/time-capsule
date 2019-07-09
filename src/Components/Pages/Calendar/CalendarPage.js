@@ -35,7 +35,7 @@ export default class CalendarPage extends Component {
     return (
       <>
         <Navbar />
-        <Info>Swipe Left and Right to see the different weeks</Info>
+        <Info>Swipe to see the different weeks</Info>
         <Scrapbook>
           <Swipe enableMouseEvents>{this.createTable()}</Swipe>
         </Scrapbook>
@@ -50,6 +50,7 @@ const WeekTitle = styled.div`
   margin: 0;
   padding: 1em 0;
   font-size: 30px;
+  font-style: bold;
 `;
 
 const WeekContent = styled.div`
@@ -59,6 +60,7 @@ const WeekContent = styled.div`
   margin-left: 7%;
   margin-right: 7%;
   width: 86%;
+  padding: 0px;
 `;
 
 const Story = styled.div`
@@ -66,6 +68,7 @@ const Story = styled.div`
   padding-left: 5px;
   border-left: solid #3eb1c8 3px;
   margin: 5px;
+  border-radius: 3px;
   transition: 0.25s ease;
   :hover {
     border-left: solid #3eb1c8 8px;
@@ -107,8 +110,8 @@ const Story = styled.div`
 
 const Scrapbook = styled.div`
   width: 86%;
-  margin: 0 7%;
-  overflow: hidden;
+  margin-left: 7%;
+  margin-right: 7%;
 `;
 
 const Info = styled.div`
@@ -123,12 +126,12 @@ const Info = styled.div`
 `;
 
 const WeekContainer = styled.div`
-  width: 100% - 10px;
+  width: 100%;
   padding-bottom: 3em;
-  margin: 2%;
   margin-top: 1em;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #f9b6259a;
+  background: #dd7d1b;
+  border-radius: 3px;
 `;
