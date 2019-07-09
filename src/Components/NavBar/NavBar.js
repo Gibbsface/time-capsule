@@ -4,6 +4,23 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Logo from "../../Images/Logo.png";
 
+const Navbar = () => {
+  return (
+    <NavbarContainer className='navbar-container'>
+      <LogoContainer to='/' />
+      <LinkContainer>
+        <Button to='/about'>About</Button>
+        <Button to='/map'>Map</Button>
+        <Button to='/kingdom'>Kingdom</Button>
+        <Button to='/calendar'>Calendar</Button>
+        <Button to='/gallery'>Gallery</Button>
+      </LinkContainer>
+    </NavbarContainer>
+  );
+};
+
+export default Navbar;
+
 const NavbarContainer = styled.div`
   background-color: #ffffff;
   margin: 0;
@@ -52,20 +69,3 @@ const Button = styled(Link)`
     color: #f9b625;
   }
 `;
-
-const Navbar = () => {
-  return (
-    <NavbarContainer className='navbar-container'>
-      <LogoContainer to='/' />
-      <LinkContainer>
-        <Button to='/about'>About</Button>
-        <Button to='/map'>Map</Button>
-        <Button to='/kingdom'>Kingdom</Button>
-        <Button to='/calendar'>Calendar</Button>
-        <Button to='/gallery'>Gallery</Button>
-      </LinkContainer>
-    </NavbarContainer>
-  );
-};
-
-export default Navbar;

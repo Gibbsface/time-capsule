@@ -8,6 +8,7 @@ import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import Dimensions from "react-dimensions";
 
 import { Interns } from "../../../Directory/Interns/interns.json";
 import InternCard from "../About/Subcomponents/InternCard.js";
@@ -18,7 +19,7 @@ class AboutPage extends Component {
   state = {
     viewport: {
       width: "60%",
-      height: 700,
+      height: "700px",
       latitude: 39.333212686504076,
       longitude: -96.54699526694483,
       zoom: 3.5
@@ -29,48 +30,47 @@ class AboutPage extends Component {
   render() {
     return (
       <>
-        <Navbar />
         <PageContainer>
-          <Info>
-            In this page, you will learn all about our interns/missionaries for
-            the summer at Cru HQ Summer Mission. This page includes information
-            on where they come from, what department they work in at HQ, and
-            other biographic information
-          </Info>
-          <MapContainer>
-            <ReactMapGL
-              mapStyle={MAP_STYLE.MAP_STYLE_LINK}
-              mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
-              {...this.state.viewport}
-              onViewportChange={viewport => this.setState({ viewport })}
-              scrollZoom={false}
-            >
-              {Interns.map(pin => {
-                if (pin.latitude && pin.longitude) {
-                  return (
-                    <Marker
-                      key={pin.id}
-                      latitude={pin.latitude}
-                      longitude={pin.longitude}
-                      offsetTop={-16}
-                      offsetLeft={-6}
-                    >
-                      <FontAwesomeIcon icon={faMapMarkerAlt} />
-                    </Marker>
-                  );
-                } else {
-                  return null;
-                }
-              })}
-            </ReactMapGL>
+          <Navbar />
+          <ContentContainer>
+            <MapContainer>
+              <ReactMapGL
+                mapStyle={MAP_STYLE.MAP_STYLE_LINK}
+                mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
+                width='100%'
+                height='690px'
+                latitude={39.333212686504076}
+                longitude={-96.54699526694483}
+                zoom={3.5}
+                scrollZoom={false}
+              >
+                {Interns.map(pin => {
+                  if (pin.latitude && pin.longitude) {
+                    return (
+                      <Marker
+                        key={pin.id}
+                        latitude={pin.latitude}
+                        longitude={pin.longitude}
+                        offsetTop={-16}
+                        offsetLeft={-6}
+                      >
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                      </Marker>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </ReactMapGL>
+            </MapContainer>
             <CardContainer>
               {Interns.map(intern => {
                 return <InternCard cardData={intern} key={intern.id} />;
               })}
             </CardContainer>
-          </MapContainer>
+          </ContentContainer>
+          <Footer />
         </PageContainer>
-        <Footer />
       </>
     );
   }
@@ -80,10 +80,11 @@ export default AboutPage;
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 700px;
-  overflow: auto;
+  height: 100%;
+  overflow-y: scroll;
   width: 40%;
   margin-left: 10px;
+  align-content: stretch;
 `;
 
 const Info = styled.h3`
@@ -100,20 +101,23 @@ const Info = styled.h3`
 `;
 
 const MapContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+const ContentContainer = styled.div`
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
+  width: 86%;
+  height: 690px;
 `;
 
 const PageContainer = styled.div`
   background-color: #666062;
-  position: 0 0;
-  margin: auto;
-  padding-right: 7%;
-  padding-left: 7%;
-  width: 86%;
-  padding-top: 15px;
-
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 100%;
 `;
