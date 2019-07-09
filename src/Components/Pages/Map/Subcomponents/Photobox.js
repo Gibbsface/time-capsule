@@ -28,7 +28,7 @@ export default class Photobox extends Component {
             Show Photos
           </ShowButton>
         </ButtonContainer>
-        {isLightBoxOpen && this.props.photos.length != null && (
+        {isLightBoxOpen && this.props.photos && (
           <Lightbox
             imageLoadErrorMessage={""}
             imagePadding={50}

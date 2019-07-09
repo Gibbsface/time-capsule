@@ -8,25 +8,11 @@ import MAP_STYLE from "../../../config/map_config.json";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import Dimensions from "react-dimensions";
 
 import { Interns } from "../../../Directory/Interns/interns.json";
 import InternCard from "../About/Subcomponents/InternCard.js";
 
-// These are the supporting styled tags
-
 class AboutPage extends Component {
-  state = {
-    viewport: {
-      width: "60%",
-      height: "700px",
-      latitude: 39.333212686504076,
-      longitude: -96.54699526694483,
-      zoom: 3.5
-    },
-    popupInfo: null
-  };
-
   render() {
     return (
       <>
@@ -38,7 +24,7 @@ class AboutPage extends Component {
                 mapStyle={MAP_STYLE.MAP_STYLE_LINK}
                 mapboxApiAccessToken={TOKEN.MAPBOX_ACCESS_TOKEN}
                 width='100%'
-                height='690px'
+                height='680px'
                 latitude={39.333212686504076}
                 longitude={-96.54699526694483}
                 zoom={3.5}
@@ -107,11 +93,12 @@ const MapContainer = styled.div`
 `;
 
 const ContentContainer = styled.div`
+  padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
   width: 86%;
-  height: 690px;
+  height: 680px;
 `;
 
 const PageContainer = styled.div`
