@@ -9,7 +9,6 @@ const curryear = new Date().getFullYear();
 const Footer = () => {
   return (
     <FooterContainer>
-      <Bar />
       <Copyright>
         <Text>© {curryear} Cru. All Rights Reserved.</Text>
         <SocialContainer>
@@ -27,6 +26,8 @@ const FooterContainer = styled.div`
   background-color: #666062;
   height: 60px;
   width: 100%;
+  border-top: solid #ffffff;
+  border-width: 4px;
 `;
 
 const Bar = styled.hr`

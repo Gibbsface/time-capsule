@@ -95,6 +95,7 @@ const Post = styled.div`
   padding-left: 5px;
   border-left: solid #3eb1c8 3px;
   margin: 5px;
+  border-radius: 3px;
   transition: 0.25s ease;
   :hover {
     border-left: solid #3eb1c8 8px;
