@@ -2,43 +2,67 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import Logo from "../../Images/Logo.png";
 
-const Navbar = () => {
+const NavbarComponent = () => {
   return (
-    <NavbarContainer className='navbar-container'>
-      <LogoContainer to='/' />
-      <LinkContainer>
-        <Button to='/about'>About</Button>
-        <Button to='/map'>Map</Button>
-        <Button to='/kingdom'>Kingdom</Button>
-        <Button to='/calendar'>Calendar</Button>
-        <Button to='/gallery'>Gallery</Button>
-      </LinkContainer>
-    </NavbarContainer>
+    <Navbar as={NavbarContainer} collapseOnSelect expand='lg'>
+      <Navbar.Brand>
+        <Button to='/'>HQ Summer Mission 2019</Button>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav navbar className='mr-auto'>
+          <Nav.Item>
+            <Button to='/about'>About</Button>
+          </Nav.Item>
+          <Nav.Item>
+            <Button to='/map'>Map</Button>
+          </Nav.Item>
+          <Nav.Item>
+            <Button to='/kingdom'>Kingdom</Button>
+          </Nav.Item>
+          <Nav.Item>
+            <Button to='/calendar'>Calendar</Button>
+          </Nav.Item>
+          <Nav.Item>
+            <Button to='/gallery'>Gallery</Button>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+    // <NavbarContainer className='navbar-container'>
+    //   <LogoContainer to='/' />
+    //   <LinkContainer>
+    //     <Button to='/about'>About</Button>
+    //     <Button to='/map'>Map</Button>
+    //     <Button to='/kingdom'>Kingdom</Button>
+    //     <Button to='/calendar'>Calendar</Button>
+    //     <Button to='/gallery'>Gallery</Button>
+    //   </LinkContainer>
+    // </NavbarContainer>
   );
 };
 
-export default Navbar;
+export default NavbarComponent;
 
 const NavbarContainer = styled.div`
   background-color: #ffffff;
   margin: 0;
-  padding-top: 15px;
-  padding-right: 7%;
-  padding-left: 7%;
-  width: 86%;
-  height: 150px;
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border-bottom: solid #f9b625;
   border-width: 4px;
 `;
 
-const LogoContainer = styled(Link)`
+const LogoContainer = styled.div`
   background-image: url(${Logo});
-  height: 180px;
-  width: 120px;
+  height: 67px;
+  width: 130px;
   display: flex;
   justify-content: flex-start;
   background-position: center;
@@ -51,9 +75,6 @@ const LinkContainer = styled.div`
   display: flex;
   height: 80;
   justify-content: space-between;
-  border-top-style: solid;
-  border-width: 150%;
-  border-color: orange;
 `;
 const Button = styled(Link)`
   background-color: transparent;
@@ -62,8 +83,7 @@ const Button = styled(Link)`
   border-color: orange;
   cursor: pointer;
   color: #666062;
-  font-size: 25px;
-  padding: 15px;
+  padding: 0px 15px;
   text-decoration: none;
   :hover {
     color: #f9b625;

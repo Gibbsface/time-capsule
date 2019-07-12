@@ -1,5 +1,5 @@
 // This is the Landing Page Component
-import Navbar from "../../NavBar/NavBar";
+import NavbarComponent from "../../NavBar/NavBar";
 import Footer from "../../Footer/Footer";
 import React, { Component } from "react";
 import SunriseImage from "../../../Images/Landing.jpg";
@@ -47,7 +47,7 @@ class LandingPage extends Component {
   render() {
     return (
       <LandingPageContainer className='landing-page-container'>
-        <Navbar />
+        <NavbarComponent />
         <HomePage>
           <Box />
           <Welcome>Welcome</Welcome>
