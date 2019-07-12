@@ -1,72 +1,41 @@
 // This is the navbar component
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Logo from "../../Images/Logo.png";
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBContainer
-} from "mdbreact";
 
-class Navbar extends Component {
-  state = {
-    isOpen: true
-  };
-
-  toggleCollapse = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
-
-  render() {
-    return (
-      <NavbarContainer>
-        <MDBNavbarBrand>
-          <Button to='/'>
-            <strong>Cru HQ Summer Mission 2019</strong>
-          </Button>
-        </MDBNavbarBrand>
-        <MDBCollapse id='navbarCollapse3' isOpen={this.state.isOpen}>
-          <LinkContainer left>
-            <MDBNavItem>
-              <Button to='/about'>About</Button>
-            </MDBNavItem>
-            <MDBNavItem>
-              <Button to='/map'>Map</Button>
-            </MDBNavItem>
-            <MDBNavItem>
-              <Button to='/kingdom'>Kingdom</Button>
-            </MDBNavItem>
-            <MDBNavItem>
-              <Button to='/calendar'>Calendar</Button>
-            </MDBNavItem>
-            <MDBNavItem>
-              <Button to='/gallery'>Gallery</Button>
-            </MDBNavItem>
-          </LinkContainer>
-        </MDBCollapse>
-      </NavbarContainer>
-    );
-  }
-}
+const Navbar = () => {
+  return (
+    <NavbarContainer className='navbar-container'>
+      <LogoContainer to='/' />
+      <LinkContainer>
+        <Button to='/about'>About</Button>
+        <Button to='/map'>Map</Button>
+        <Button to='/kingdom'>Kingdom</Button>
+        <Button to='/calendar'>Calendar</Button>
+        <Button to='/gallery'>Gallery</Button>
+      </LinkContainer>
+    </NavbarContainer>
+  );
+};
 
 export default Navbar;
 
-const NavbarContainer = styled(MDBNavbar)`
+const NavbarContainer = styled.div`
   background-color: #ffffff;
   margin: 0;
-  width: 100%;
+  padding-top: 15px;
+  padding-right: 7%;
+  padding-left: 7%;
+  width: 86%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
   border-bottom: solid #f9b625;
   border-width: 4px;
-  justify-content: flex-start !important;
 `;
 
-const LogoContainer = styled(MDBNavbarBrand)`
+const LogoContainer = styled(Link)`
   background-image: url(${Logo});
   height: 180px;
   width: 120px;
@@ -76,21 +45,25 @@ const LogoContainer = styled(MDBNavbarBrand)`
   background-origin: content-box;
   background-size: cover;
   background-repeat: no-repeat;
-  @media screen and (max-width: 630px) {
-    display: none;
-  }
 `;
-const LinkContainer = styled(MDBNavbarNav)`
+const LinkContainer = styled.div`
+  background-color: transparent;
   display: flex;
-  flex-direction: row;
+  height: 80;
+  justify-content: space-between;
+  border-top-style: solid;
+  border-width: 150%;
+  border-color: orange;
 `;
-const NavCollapse = styled(MDBCollapse)`
-  isopen: true;
-`;
-const Button = styled(MDBNavLink)`
+const Button = styled(Link)`
+  background-color: transparent;
+  border: 0px;
+  border-right-style: solid;
+  border-color: orange;
   cursor: pointer;
   color: #666062;
-  padding: 0 10px !important;
+  font-size: 25px;
+  padding: 15px;
   text-decoration: none;
   :hover {
     color: #f9b625;
