@@ -19,7 +19,7 @@
     "react-grid-gallery": "^0.5.4",
     "react-image-lightbox": "^5.1.0",
     "react-map-gl": "^5.0.3",
-    "react-native": "^0.59.9",
+    "react-native": "^0.62.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-swipeable-views": "^0.13.3",
